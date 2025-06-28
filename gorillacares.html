@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gorilla Cares</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="assets/gorilla.png">
+  <link rel="shortcut icon" href="assets/gorilla.png" type="image/png">
+
+</head>
+
+<body>
+
+<nav id="navbar">
+  <div id="nav-left-group">
+    <a href="index.html" id="nav-logo-link">
+      <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
+        <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
+      </svg>
+    </a>
+    <div id="desktop-nav-left">
+      <a href="aboutus.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="gorillacares.html" class="nav-link">Gorilla Cares</a>
+      <a href="contactus.html" class="nav-link">Contact Us</a>
+    </div>
+  </div>
+
+  <div id="nav-right">
+    <a href="https://www.linkedin.com/in/grant-riley-sales" target="_blank" class="linkedin-icon">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <button class="hamburger" onclick="toggleMenu()">Menu</button>
+  </div>
+</nav>
+
+<!-- HAMBURGER MODAL -->
+<div id="menu-modal" class="menu-modal">
+  <div class="menu-modal-content">
+    <div class="menu-modal-header">
+      <a href="index.html">
+        <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
+        <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
+      </svg>
+      </a>
+      <button class="close-menu" onclick="toggleMenu()">x</button>
+    </div>
+    <div class="menu-modal-links">
+      <a href="aboutus.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="gorillacares.html" class="nav-link">Gorilla Cares</a>
+      <a href="contactus.html" class="nav-link">Contact Us</a>
+      <a href="https://www.linkedin.com/in/grant-riley-sales" target="_blank" class="linkedin-icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FIRST BODY SECTION: Responsive Image Box like Contact Us -->
+<section class="responsive-section">
+  <div class="responsive-half">
+    <div class="floating-box">
+      <img src="assets/9.png" alt="GMG Cares Image" class="responsive-img">
+    </div>
+  </div>
+</section>
+
+<!-- SECOND BODY SECTION: Animated Donation Count -->
+<div id="gorillacares-second">
+  <div class="gorillacares-box">
+    <h1>Amount Donated</h1>
+    <div id="donation-amount" class="donation-amount">$0.00</div>
+  </div>
+</div>
+
+<script>
+  const amountEl = document.getElementById('donation-amount');
+  let current = 0;
+  const target = 10050.70;
+  const duration = 3000;
+  const steps = 60;
+  const increment = target / steps;
+  let count = 0;
+
+  function animateCount() {
+    count++;
+    current += increment;
+    if (count >= steps) {
+      amountEl.textContent = "$10,050.70";
+      return;
+    }
+    amountEl.textContent = "$" + current.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+    requestAnimationFrame(animateCount);
+  }
+
+  window.addEventListener('load', () => {
+    setTimeout(animateCount, 500);
+  });
+</script>
+
+<!-- THIRD BODY SECTION: Left and Right Halves with Floating Boxes -->
+<div id="gorillacares-third">
+  <div id="gorillacares-third-left" class="floating-box">
+    <h1>Our Mission</h1>
+    <h2>Through strategic partnerships and community-driven action, GMG empowers people and organizations to achieve sustainable growth.</h2>
+  </div>
+
+  <div id="gorillacares-third-right" class="floating-box">
+    <h1>How We Help</h1>
+    <h2>From mentorship programs to sponsorships and donations, our team is committed to fostering innovation and well-being.</h2>
+  </div>
+</div>
+
+<footer>
+  <svg class="logo-svg" width="260px" height="120px" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+    <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" style="font-size: 38px;" class="logo-text">Gorilla</text>
+    <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" style="font-size: 20px;" class="logo-text">Marketing Group</text>
+  </svg>
+  <p>&copy; 2025 Gorilla Marketing Group LLC. All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('menu-modal').classList.toggle('show');
+  }
+</script>
+</body>
+</html>
+

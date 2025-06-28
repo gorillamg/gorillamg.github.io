@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="assets/gorilla.png">
+  <link rel="shortcut icon" href="assets/gorilla.png" type="image/png">
+
+</head>
+<body>
+
+<nav id="navbar">
+  <div id="nav-left-group">
+    <a href="index.html" id="nav-logo-link">
+      <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
+        <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
+      </svg>
+    </a>
+    <div id="desktop-nav-left">
+      <a href="aboutus.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="gorillacares.html" class="nav-link">Gorilla Cares</a>
+      <a href="contactus.html" class="nav-link">Contact Us</a>
+    </div>
+  </div>
+  <div id="nav-right">
+    <a href="https://www.linkedin.com/in/grant-riley-sales" target="_blank" class="linkedin-icon">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <button class="hamburger" onclick="toggleMenu()">Menu</button>
+  </div>
+</nav>
+
+<!-- HAMBURGER MODAL -->
+<div id="menu-modal" class="menu-modal">
+  <div class="menu-modal-content">
+    <div class="menu-modal-header">
+      <a href="index.html">
+        <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
+          <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
+          <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
+        </svg>
+      </a>
+      <button class="close-menu" onclick="toggleMenu()">x</button>
+    </div>
+    <div class="menu-modal-links">
+      <a href="aboutus.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="gorillacares.html" class="nav-link">Gorilla Cares</a>
+      <a href="contactus.html" class="nav-link">Contact Us</a>
+      <a href="https://www.linkedin.com/in/grant-riley-sales" target="_blank" class="linkedin-icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FIRST BODY SECTION -->
+<section class="responsive-section">
+  <div class="responsive-half">
+    <div class="floating-box">
+      <img src="assets/5.png" alt="Contact Us" class="responsive-img">
+    </div>
+  </div>
+</section>
+
+<!-- SECOND BODY SECTION -->
+<section class="responsive-section" style="background-color: #24496b;">
+  <div class="responsive-half">
+    <div class="floating-box">
+      <h1>Contact Us</h1>
+      <h2 class="contact-description">
+        Learn more about driving traffic and boosting conversions. Please fill out all fields and submit the Contact Form, or reach out directly to Grant Riley using the contact info below, or visit the 
+        <a href="https://eliterewards.biz/" class="elite-link" target="_blank">Elite Rewards</a> website.
+      </h2>
+      <div class="contact-line">
+        <a href="tel:5056153844" class="icon-circle"><i class="fas fa-phone"></i></a>
+        <h2>505-615-3844</h2>
+      </div>
+      <div class="contact-line">
+        <a href="mailto:grant@eliterewards.biz" class="icon-circle"><i class="fas fa-envelope"></i></a>
+        <h2>grant@eliterwards.biz</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="responsive-half">
+    <div class="floating-box contactus-form-box">
+      <h2>Contact Form</h2>
+      <form action="https://formsubmit.co/YOUREMAILHERE" method="POST">
+        <!-- Redirect to success page -->
+        <input type="hidden" name="_next" value="https://yourdomain.com/success.html">
+
+        <label>First Name</label>
+        <input type="text" name="First Name" placeholder="First Name" required>
+
+        <label>Last Name</label>
+        <input type="text" name="Last Name" placeholder="Last Name" required>
+
+        <label>Email</label>
+        <input type="email" name="Email" placeholder="Your Email" required>
+
+        <label>Phone Number</label>
+        <input type="text" name="Phone Number" placeholder="Phone Number" required>
+
+        <label>Interest</label>
+        <select name="Interest" required>
+          <option value="">-- Select an Option --</option>
+          <option>Driving Traffic</option>
+          <option>Boosting Conversions</option>
+          <option>Gift with Purchase Programs</option>
+          <option>Loyalty Points Programs</option>
+          <option>eLearning Platforms</option>
+          <option>Travel Incentives</option>
+          <option>Customer Service Sales Training</option>
+          <option>Other</option>
+        </select>
+
+        <label>Message</label>
+        <textarea name="Message" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <svg class="logo-svg" width="260px" height="120px" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+    <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" style="font-size: 38px;" class="logo-text">Gorilla</text>
+    <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" style="font-size: 20px;" class="logo-text">Marketing Group</text>
+  </svg>
+  <p>&copy; 2025 Gorilla Marketing Group LLC. All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('menu-modal').classList.toggle('show');
+  }
+</script>
+</body>
+</html>

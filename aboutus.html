@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="assets/gorilla.png">
+  <link rel="shortcut icon" href="assets/gorilla.png" type="image/png">
+
+</head>
+<body>
+
+<nav id="navbar">
+  <div id="nav-left-group">
+    <a href="index.html" id="nav-logo-link">
+      <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
+        <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
+      </svg>
+    </a>
+    <div id="desktop-nav-left">
+      <a href="aboutus.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="gorillacares.html" class="nav-link">Gorilla Cares</a>
+      <a href="contactus.html" class="nav-link">Contact Us</a>
+    </div>
+  </div>
+
+  <div id="nav-right">
+    <a href="https://www.linkedin.com/in/grant-riley-sales" target="_blank" class="linkedin-icon">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <button class="hamburger" onclick="toggleMenu()">Menu</button>
+  </div>
+</nav>
+
+<!-- HAMBURGER MODAL -->
+<div id="menu-modal" class="menu-modal">
+  <div class="menu-modal-content">
+    <div class="menu-modal-header">
+      <a href="index.html">
+        <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
+        <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
+      </svg>
+      </a>
+      <button class="close-menu" onclick="toggleMenu()">x</button>
+    </div>
+    <div class="menu-modal-links">
+      <a href="aboutus.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="gorillacares.html" class="nav-link">Gorilla Cares</a>
+      <a href="contactus.html" class="nav-link">Contact Us</a>
+      <a href="https://www.linkedin.com/in/grant-riley-sales" target="_blank" class="linkedin-icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FIRST BODY SECTION -->
+<section class="responsive-section">
+  <div class="responsive-half">
+    <div class="floating-box">
+      <h1>About Gorilla Marketing Group</h1>
+      <h2>We use decades of marketing experience and forward-thinking strategies to help businesses grow.</h2>
+    </div>
+  </div>
+  <div class="responsive-half">
+    <div class="floating-box">
+      <img src="assets/grant.jpg" alt="Grant Riley" class="founder-img">
+      <h2 class="founder-name">Grant Riley</h2>
+      <a href="https://www.linkedin.com/in/grant-riley-sales" target="_blank" class="founder-linkedin">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECOND BODY SECTION -->
+<section class="responsive-section" style="background-color: #24496b;">
+  <div class="responsive-half">
+    <div class="floating-box">
+      <img src="assets/elite.jpg" alt="Elite Rewards" class="elite-img">
+      <h1>Managing Partner of <a href="https://eliterewards.biz/" class="elite-link" target="_blank">Elite Rewards</a></h1>
+    </div>
+  </div>
+  <div class="responsive-half">
+    <div class="floating-box contact-box">
+      <h1>Contact Grant</h1>
+      <div class="contact-line">
+	<a href="tel:5056153844" class="icon-circle"><i class="fas fa-phone"></i></a>
+        <h2>505-615-3844</h2>
+      </div>
+      <div class="contact-line">
+	<a href="mailto:grant@eliterewards.biz" class="icon-circle"><i class="fas fa-envelope"></i></a>
+        <h2>grant@eliterewards.biz</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer>
+  <svg class="logo-svg" width="260px" height="120px" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+    <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" style="font-size: 38px;" class="logo-text">Gorilla</text>
+    <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" style="font-size: 20px;" class="logo-text">Marketing Group</text>
+  </svg>
+  <p>&copy; 2025 Gorilla Marketing Group LLC. All rights reserved.</p>
+</footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu-modal').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
+
+

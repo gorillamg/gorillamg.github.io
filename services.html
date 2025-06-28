@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="assets/gorilla.png">
+  <link rel="shortcut icon" href="assets/gorilla.png" type="image/png">
+
+</head>
+<body>
+
+<nav id="navbar">
+  <div id="nav-left-group">
+    <a href="index.html" id="nav-logo-link">
+      <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
+        <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
+      </svg>
+    </a>
+    <div id="desktop-nav-left">
+      <a href="aboutus.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="gorillacares.html" class="nav-link">Gorilla Cares</a>
+      <a href="contactus.html" class="nav-link">Contact Us</a>
+    </div>
+  </div>
+
+  <div id="nav-right">
+    <a href="https://www.linkedin.com/in/grant-riley-sales" target="_blank" class="linkedin-icon">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <button class="hamburger" onclick="toggleMenu()">Menu</button>
+  </div>
+</nav>
+
+<!-- HAMBURGER MODAL -->
+<div id="menu-modal" class="menu-modal">
+  <div class="menu-modal-content">
+    <div class="menu-modal-header">
+      <a href="index.html">
+        <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
+        <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
+      </svg>
+      </a>
+      <button class="close-menu" onclick="toggleMenu()">x</button>
+    </div>
+    <div class="menu-modal-links">
+      <a href="aboutus.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="gorillacares.html" class="nav-link">Gorilla Cares</a>
+      <a href="contactus.html" class="nav-link">Contact Us</a>
+      <a href="https://www.linkedin.com/in/grant-riley-sales" target="_blank" class="linkedin-icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FIRST BODY SECTION (Left/Right Layout) -->
+<section class="responsive-section">
+  <div class="responsive-half">
+    <div class="floating-box">
+      <button class="modal-btn" onclick="openModal('traffic')">Drive Traffic</button>
+      <button class="modal-btn" onclick="openModal('conversions')">Boost Conversions</button>
+      <button class="modal-btn" onclick="openModal('employees')">Retain Employees</button>
+    </div>
+  </div>
+  <div class="responsive-half">
+    <div class="floating-box">
+      <img src="assets/4.png" alt="Services Image" class="responsive-img" />
+    </div>
+  </div>
+</section>
+
+<!-- SECOND BODY SECTION -->
+<section class="responsive-section" style="background-color: #24496b;">
+
+  <div class="responsive-half">
+   <div class="floating-box">
+      <img src="assets/2.png" alt="Contact Image" class="responsive-img" />
+   </div>
+  </div>
+  <div class="responsive-half">
+    <div class="floating-box">
+      <h1>Let's Talk</h1>
+      <h2>Reach out and let's start building your growth plan together.</h2>
+      <a href="contactus.html" class="custom-btn getstarted-btn">Get Started</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- MODALS -->
+<div id="traffic" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('traffic')">&times;</span>
+    <h1>Drive Traffic</h1>
+    <h2>Use our experience and custom strategies to grow awareness and traffic fast.</h2>
+  </div>
+</div>
+
+<div id="conversions" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('conversions')">&times;</span>
+    <h1>Boost Conversions</h1>
+    <h2>We help your traffic convert with tested techniques and real incentive systems.</h2>
+  </div>
+</div>
+
+<div id="employees" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('employees')">&times;</span>
+    <h1>Retain Employees</h1>
+    <h2>Custom engagement and recognition solutions to reduce churn and drive loyalty.</h2>
+  </div>
+</div>
+
+<footer>
+  <svg class="logo-svg" width="260px" height="120px" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+    <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" style="font-size: 38px;" class="logo-text">Gorilla</text>
+    <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" style="font-size: 20px;" class="logo-text">Marketing Group</text>
+  </svg>
+  <p>&copy; 2025 Gorilla Marketing Group LLC. All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('menu-modal').classList.toggle('show');
+  }
+
+  function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+</script>
+
+</body>
+</html>
+
+
+
