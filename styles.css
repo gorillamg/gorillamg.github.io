@@ -51,7 +51,6 @@ input, textarea, select {
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  min-width: 90%;
   box-sizing: border-box;
 }
 
@@ -915,8 +914,6 @@ footer svg text {
 #gorillacares-third-right {
   flex: 1 1 400px;
   max-width: 600px;
-  width: auto !important;
-  min-width: 0 !important;
 }
 
 #gorillacares-third h1 {
