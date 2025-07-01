@@ -157,33 +157,31 @@
 <!-- Load EmailJS SDK before your custom script -->
 <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
 
-<script>
-  // Initialize EmailJS with your Public Key
-  (function(){
-    emailjs.init("q-VOpgLu6FiVI0MLe"); 
+<script type="text/javascript">
+  (function() {
+    emailjs.init("q-VOpgLu6FiVI0MLe");
   })();
 
   function sendEmail(e) {
     e.preventDefault();
+    console.log("✅ sendEmail() triggered."); // <= FORCE check
 
     emailjs.sendForm(
-      'service_q0cr62v',    // ✅ Your Service ID
-      'template_8thlygx',   // ✅ Only your MAIN template ID (with auto-reply configured!)
-      '#contact-form'       // ✅ ID of your form
+      'service_q0cr62v',
+      'template_8thlygx',
+      '#contact-form'
     ).then(
       function(response) {
-        console.log('SUCCESS!', response.status, response.text);
+        console.log('✅ SUCCESS!', response.status, response.text);
         alert("✅ Thank you! Your contact form was successfully submitted.");
-        // Redirect to your success page:
         window.location.href = "https://gorillamg.github.io/success.html";
       },
       function(error) {
-        console.log('FAILED...', error);
+        console.log('❌ FAILED...', error);
         alert("❌ Something went wrong. Please try again at a later date.");
       }
     );
 
-    // Optional: clear form fields after submit
     e.target.reset();
   }
 </script>
