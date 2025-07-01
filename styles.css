@@ -357,7 +357,7 @@ footer svg text {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 20px 20px;
   gap: 20px;
   box-sizing: border-box;
   margin-top: 120px;
@@ -365,7 +365,7 @@ footer svg text {
 
 .responsive-half {
   flex: 1 1 500px;
-  max-width: 600px;
+  min-width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
