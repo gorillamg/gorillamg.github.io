@@ -385,62 +385,6 @@ footer svg text {
 
 /* === First Body Section === */
 
-.responsive-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 40px 20px;
-  gap: 40px;
-  box-sizing: border-box;
-}
-.responsive-half {
-  flex: 1 1 50%;
-  max-width: 50%;
-  min-width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-/* 
-
-#index-wrapper {
-  background-color: #1B0B26;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 20px;
-  margin-top: 100px;
-}
-
-#index-left, #index-right {
-  width: 50%;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-#right-image {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 12px;
-}
-
-.index-left-box {
-  background-color: #778899;
-  padding: 30px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 90%;
-  box-sizing: border-box;
-}
-
-*/
-
 /* === Index Get Started Button === */
 .getstarted-btn {
   background-color: #f7fafe;
