@@ -43,17 +43,47 @@ input, textarea, select {
 }
 
 /* ==============================
-   UNIVERSAL FLOATING BOX STYLE
+   responsive section and responsive half + screen size responsiveness
 ============================== */
+.responsive-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.responsive-half {
+  flex: 1 1 500px;      /* Flexible basis: good for wrapping */
+  max-width: 50%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
 .floating-box {
-  background-color: #FFFFFF;
+  background: #FFFFFF;
   padding: 30px;
   border-radius: 12px;
-  text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  min-width: 75%;
-  max-width: 75%;
+  width: 75%;
+  max-width: 600px;
+  text-align: center;
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .responsive-section {
+    flex-direction: column;
+  }
+  .responsive-half {
+    max-width: 100%;
+  }
+  .floating-box {
+    width: 90%;
+    max-width: 90%;
+  }
 }
 
 /* ==============================
@@ -550,22 +580,6 @@ footer svg text {
   max-height: 100%;
 }
 
-@media (max-width: 768px) {
-  .responsive-section {
-    flex-direction: column;
-  }
-
-  .responsive-half {
-    max-width: 90%;
-    min-width: 90%;
-  }
-
-  .floating-box {
-    min-width: 75%;
-    max-width: 75%;
-  }
-}
-
 /* ==============================
    ABOUT US PAGE
 ============================== */
@@ -742,17 +756,6 @@ footer svg text {
   background-color: #98b1c8;
   color: #000000;
   border: 2px solid #071f35;
-}
-
-/* Responsive stack on small screens */
-@media (max-width: 768px) {
-  .aboutus-left, .aboutus-right {
-    flex: 1 1 100%;
-  }
-
-  #aboutus-wrapper {
-    padding: 120px 20px 60px;
-  }
 }
 
 /* SERVICES PAGE */
