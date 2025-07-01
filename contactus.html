@@ -157,9 +157,9 @@
 </script>
 
 <!-- Load EmailJS SDK before your custom script -->
-<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-<script type="text/javascript">
+<script>
   (function() {
     emailjs.init("q-VOpgLu6FiVI0MLe");
   })();
@@ -168,10 +168,9 @@
     e.preventDefault();
     console.log("✅ sendEmail() triggered.");
 
-    // ✅ Correctly get values using querySelector
     const firstName = document.querySelector('input[name="first_name"]').value.trim();
     const lastName = document.querySelector('input[name="last_name"]').value.trim();
-    document.getElementById('from_name').value = `${firstName} ${lastName}`;
+    document.querySelector('input[name="from_name"]').value = `${firstName} ${lastName}`;
 
     emailjs.sendForm(
       'service_vqvje8u',
