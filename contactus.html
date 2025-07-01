@@ -170,7 +170,7 @@
     e.preventDefault();
     console.log("✅ sendEmail() triggered.");
 
-    // Combine first + last name for hidden input
+    // Set from_name dynamically
     const firstName = document.querySelector('input[name="first_name"]').value.trim();
     const lastName = document.querySelector('input[name="last_name"]').value.trim();
     document.getElementById('from_name').value = `${firstName} ${lastName}`;
@@ -182,17 +182,14 @@
     ).then(
       function(response) {
         console.log('✅ SUCCESS!', response.status, response.text);
-
-        // ✅ IMMEDIATE REDIRECT with NO delay and NO in-page message
+        // Immediately redirect on success
         window.location.href = "https://gorillamg.github.io/success.html";
       },
       function(error) {
         console.log('❌ FAILED...', error);
-        alert("❌ Something went wrong. Please try again at a later date.");
+        alert("❌ Something went wrong. Please try again later.");
       }
     );
-
-    e.target.reset();
   }
 </script>
 
