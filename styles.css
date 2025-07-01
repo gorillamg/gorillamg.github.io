@@ -1,15 +1,22 @@
 /* ==============================
    GLOBAL STYLES
 ============================== */
-body {
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
   background-color: #446d92;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+main {
+  flex: 1; /* Pushes footer down when content is short */
 }
 
 h1 {
