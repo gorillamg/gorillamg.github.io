@@ -45,6 +45,7 @@ input, textarea, select {
 /* ==============================
    responsive section and responsive half + screen size responsiveness
 ============================== */
+
 .responsive-section {
   display: flex;
   flex-wrap: wrap;
@@ -55,11 +56,21 @@ input, textarea, select {
 }
 
 .responsive-half {
-  flex: 1 1 500px;      /* Flexible basis: good for wrapping */
+  flex: 1 1 500px;
   max-width: 50%;
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .responsive-section {
+    flex-direction: column;
+  }
+  .responsive-half {
+    max-width: 100%;
+  }
 }
 
 .floating-box {
@@ -74,12 +85,6 @@ input, textarea, select {
 }
 
 @media (max-width: 768px) {
-  .responsive-section {
-    flex-direction: column;
-  }
-  .responsive-half {
-    max-width: 100%;
-  }
   .floating-box {
     width: 90%;
     max-width: 90%;
