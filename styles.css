@@ -903,31 +903,19 @@ footer svg text {
 
 /* Third Body Section */
 #gorillacares-third {
-  background-color: #24496b;
   display: flex;
   flex-wrap: wrap;
-  padding: 60px 40px;
   justify-content: center;
   gap: 40px;
-  box-sizing: border-box;
-}
-
-#gorillacares-third .floating-box {
-  flex: 1 1 400px;   /* flexible like responsive-half */
-  max-width: 600px;  /* optional cap */
-  width: auto;       /* undo width: 100% */
+  background-color: #24496b;
+  padding: 60px 40px;
 }
 
 #gorillacares-third-left,
 #gorillacares-third-right {
-  flex: 1 1 400px; /* flexible two-half layout */
-  max-width: 600px; /* optional: limits how wide each box can get */
-  background-color: #FFFFFF;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  text-align: center;
+  flex: 1 1 400px;
+  max-width: 600px;
+  width: auto !important;
 }
 
 #gorillacares-third h1 {
