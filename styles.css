@@ -914,7 +914,8 @@ footer svg text {
 
 #gorillacares-third-left,
 #gorillacares-third-right {
-  min-width: 90%;
+  flex: 1 1 400px; /* flexible two-half layout */
+  max-width: 600px; /* optional: limits how wide each box can get */
   background-color: #FFFFFF;
   padding: 30px;
   border-radius: 12px;
