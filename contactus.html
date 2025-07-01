@@ -168,7 +168,7 @@
     e.preventDefault();
     console.log("✅ sendEmail() triggered.");
 
-    // 👉 Move this here:
+    // ✅ Correctly get values using querySelector
     const firstName = document.querySelector('input[name="first_name"]').value.trim();
     const lastName = document.querySelector('input[name="last_name"]').value.trim();
     document.getElementById('from_name').value = `${firstName} ${lastName}`;
