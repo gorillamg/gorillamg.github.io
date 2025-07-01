@@ -912,6 +912,12 @@ footer svg text {
   box-sizing: border-box;
 }
 
+#gorillacares-third .floating-box {
+  flex: 1 1 400px;   /* flexible like responsive-half */
+  max-width: 600px;  /* optional cap */
+  width: auto;       /* undo width: 100% */
+}
+
 #gorillacares-third-left,
 #gorillacares-third-right {
   flex: 1 1 400px; /* flexible two-half layout */
