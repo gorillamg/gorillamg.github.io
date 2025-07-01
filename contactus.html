@@ -156,10 +156,6 @@
   }
 </script>
 
-const firstName = document.getElementById('first_name').value.trim();
-const lastName = document.getElementById('last_name').value.trim();
-document.getElementById('from_name').value = `${firstName} ${lastName}`;
-
 <!-- Load EmailJS SDK before your custom script -->
 <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
 
@@ -170,7 +166,12 @@ document.getElementById('from_name').value = `${firstName} ${lastName}`;
 
   function sendEmail(e) {
     e.preventDefault();
-    console.log("✅ sendEmail() triggered."); // <= FORCE check
+    console.log("✅ sendEmail() triggered.");
+
+    // 👉 Move this here:
+    const firstName = document.querySelector('input[name="first_name"]').value.trim();
+    const lastName = document.querySelector('input[name="last_name"]').value.trim();
+    document.getElementById('from_name').value = `${firstName} ${lastName}`;
 
     emailjs.sendForm(
       'service_vqvje8u',
