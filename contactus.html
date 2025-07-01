@@ -167,38 +167,33 @@
   })();
 
   function sendEmail(e) {
-  e.preventDefault();
-  console.log("✅ sendEmail() triggered.");
+    e.preventDefault();
+    console.log("✅ sendEmail() triggered.");
 
-  // Set from_name dynamically
-  const firstName = document.querySelector('input[name="first_name"]').value.trim();
-  const lastName = document.querySelector('input[name="last_name"]').value.trim();
-  document.getElementById('from_name').value = `${firstName} ${lastName}`;
+    // Combine first + last name for hidden input
+    const firstName = document.querySelector('input[name="first_name"]').value.trim();
+    const lastName = document.querySelector('input[name="last_name"]').value.trim();
+    document.getElementById('from_name').value = `${firstName} ${lastName}`;
 
-  emailjs.sendForm(
-    'service_vqvje8u',
-    'template_8thlygx',
-    '#contact-form'
-  ).then(
-    function(response) {
-      console.log('✅ SUCCESS!', response.status, response.text);
+    emailjs.sendForm(
+      'service_vqvje8u',
+      'template_8thlygx',
+      '#contact-form'
+    ).then(
+      function(response) {
+        console.log('✅ SUCCESS!', response.status, response.text);
 
-      const msg = document.getElementById('form-message');
-      msg.textContent = "✅ Successfully submitted! Thank you!";
-      msg.classList.remove('hidden');
-
-      setTimeout(() => {
+        // ✅ IMMEDIATE REDIRECT with NO delay and NO in-page message
         window.location.href = "https://gorillamg.github.io/success.html";
-      }, 1000);
-    },
-    function(error) {
-      console.log('❌ FAILED...', error);
-      alert("❌ Something went wrong. Please try again at a later date.");
-    }
-  );
+      },
+      function(error) {
+        console.log('❌ FAILED...', error);
+        alert("❌ Something went wrong. Please try again at a later date.");
+      }
+    );
 
-  e.target.reset();
-}
+    e.target.reset();
+  }
 </script>
 
 </body>
