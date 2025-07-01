@@ -20,7 +20,7 @@
 
   gtag('config', 'G-RN76QNDETC');
 </script>
-
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
 </head>
 <body>
 
@@ -103,41 +103,39 @@
   <div class="responsive-half">
     <div class="floating-box contactus-form-box">
       <h2>Contact Form</h2>
-      <form action="https://formsubmit.co/gorillamgwebsite@gmail.com" method="POST">
-        <!-- Redirect to success page -->
-        <input type="hidden" name="_next" value="https://gorillamg.github.io/success.html">
-        <input type="hidden" name="_captcha" value="false">
+	  
+      <form id="contact-form" onsubmit="sendEmail(event)">
+  <label>First Name</label>
+  <input type="text" name="first_name" placeholder="First Name" required>
 
-        <label>First Name</label>
-        <input type="text" name="First Name" placeholder="First Name" required>
+  <label>Last Name</label>
+  <input type="text" name="last_name" placeholder="Last Name" required>
 
-        <label>Last Name</label>
-        <input type="text" name="Last Name" placeholder="Last Name" required>
+  <label>Email</label>
+  <input type="email" name="email" placeholder="Your Email" required>
 
-        <label>Email</label>
-        <input type="email" name="Email" placeholder="Your Email" required>
+  <label>Phone Number</label>
+  <input type="text" name="phone_number" placeholder="Phone Number" required>
 
-        <label>Phone Number</label>
-        <input type="text" name="Phone Number" placeholder="Phone Number" required>
+  <label>Interest</label>
+  <select name="interest" required>
+    <option value="">-- Select an Option --</option>
+    <option>Driving Traffic</option>
+    <option>Boosting Conversions</option>
+    <option>Gift with Purchase Programs</option>
+    <option>Loyalty Points Programs</option>
+    <option>eLearning Platforms</option>
+    <option>Travel Incentives</option>
+    <option>Customer Service Sales Training</option>
+    <option>Other</option>
+  </select>
 
-        <label>Interest</label>
-        <select name="Interest" required>
-          <option value="">-- Select an Option --</option>
-          <option>Driving Traffic</option>
-          <option>Boosting Conversions</option>
-          <option>Gift with Purchase Programs</option>
-          <option>Loyalty Points Programs</option>
-          <option>eLearning Platforms</option>
-          <option>Travel Incentives</option>
-          <option>Customer Service Sales Training</option>
-          <option>Other</option>
-        </select>
+  <label>Message</label>
+  <textarea name="message" placeholder="Your Message" required></textarea>
 
-        <label>Message</label>
-        <textarea name="Message" placeholder="Your Message" required></textarea>
+  <button type="submit" class="submit-btn">Submit</button>
+</form>
 
-        <button type="submit" class="submit-btn">Submit</button>
-      </form>
     </div>
   </div>
 </section>
@@ -155,5 +153,38 @@
     document.getElementById('menu-modal').classList.toggle('show');
   }
 </script>
+
+<script>
+  // Initialize EmailJS with your Public Key
+  (function(){
+    emailjs.init("3RUJMh49eZp4Jed1_"); 
+  })();
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_q0cr62v',    
+      'template_8thlygx',
+	  'template_j9bxpg8',
+      '#contact-form'
+    ).then(
+      function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        alert("✅ Thank you! Your contact form was successfully submitted.");
+        // Redirect to your success page:
+        window.location.href = "https://gorillamg.github.io/success.html";
+      },
+      function(error) {
+        console.log('FAILED...', error);
+        alert("❌ Something went wrong. Please try again at a later date.");
+      }
+    );
+
+    // Optional: clear form fields after submit
+    e.target.reset();
+  }
+</script>
+
 </body>
 </html>
