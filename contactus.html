@@ -133,6 +133,8 @@
   <label>Message</label>
   <textarea name="message" placeholder="Your Message" required></textarea>
 
+  <input type="hidden" name="from_name" id="from_name">
+  
   <button type="submit" class="submit-btn">Submit</button>
 </form>
 
@@ -153,6 +155,10 @@
     document.getElementById('menu-modal').classList.toggle('show');
   }
 </script>
+
+const firstName = document.getElementById('first_name').value.trim();
+const lastName = document.getElementById('last_name').value.trim();
+document.getElementById('from_name').value = `${firstName} ${lastName}`;
 
 <!-- Load EmailJS SDK before your custom script -->
 <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
