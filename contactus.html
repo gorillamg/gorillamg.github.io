@@ -100,6 +100,8 @@
     </div>
   </div>
 
+<div id="form-message" class="hidden"></div>
+	
   <div class="responsive-half">
     <div class="floating-box contactus-form-box">
       <h2>Contact Form</h2>
@@ -156,10 +158,10 @@
   }
 </script>
 
-<!-- Load EmailJS SDK before your custom script -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<!-- Load EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
 
-<script>
+<script type="text/javascript">
   (function() {
     emailjs.init("q-VOpgLu6FiVI0MLe");
   })();
@@ -168,9 +170,10 @@
     e.preventDefault();
     console.log("✅ sendEmail() triggered.");
 
+    // Set from_name dynamically
     const firstName = document.querySelector('input[name="first_name"]').value.trim();
     const lastName = document.querySelector('input[name="last_name"]').value.trim();
-    document.querySelector('input[name="from_name"]').value = `${firstName} ${lastName}`;
+    document.getElementById('from_name').value = `${firstName} ${lastName}`;
 
     emailjs.sendForm(
       'service_vqvje8u',
@@ -179,7 +182,13 @@
     ).then(
       function(response) {
         console.log('✅ SUCCESS!', response.status, response.text);
-        alert("✅ Thank you! Your contact form was successfully submitted.");
+
+        // Show non-blocking message immediately
+        const msg = document.getElementById('form-message');
+        msg.textContent = "✅ Successfully submitted! Thank you!";
+        msg.classList.remove('hidden');
+
+        // Redirect immediately at the same time
         window.location.href = "https://gorillamg.github.io/success.html";
       },
       function(error) {
