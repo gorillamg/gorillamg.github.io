@@ -57,7 +57,7 @@ input, textarea, select {
 }
 
 .responsive-half {
-  flex: 1 1 50%;
+  flex: 1 1 600px;
   min-width: 50%;
   display: flex;
   justify-content: center;
