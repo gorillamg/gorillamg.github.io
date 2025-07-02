@@ -1045,20 +1045,3 @@ footer svg text {
     gap: 30px;
   }
 }
-
-/* success message */
-
-#form-message {
-  background-color: #FFFFFF; 
-  color: #000000;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.hidden {
-  display: none;
-}
-
