@@ -58,7 +58,7 @@ input, textarea, select {
 
 .responsive-half {
   flex: 1 1 500px;
-  max-width: 50%;
+  min-width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +70,7 @@ input, textarea, select {
     flex-direction: column;
   }
   .responsive-half {
-    max-width: 100%;
+    min-width: 90%;
   }
 }
 
@@ -79,16 +79,14 @@ input, textarea, select {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  width: 75%;
-  max-width: 600px;
+  min-width: 90%;
   text-align: center;
   box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .floating-box {
-    width: 90%;
-    max-width: 90%;
+    min-width: 90%;
   }
 }
 
