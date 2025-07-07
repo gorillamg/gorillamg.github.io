@@ -148,6 +148,7 @@
   const rightArrow = document.querySelector('.right-arrow');
   const totalImages = document.querySelectorAll('.carousel-img').length;
   let index = 0;
+  let autoSlideInterval;
 
   function showImage() {
     carouselImages.style.transform = `translateX(-${index * 100}%)`;
@@ -163,10 +164,27 @@
     showImage();
   }
 
-  rightArrow.addEventListener('click', nextImage);
-  leftArrow.addEventListener('click', prevImage);
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(nextImage, 5000);
+  }
 
-  setInterval(nextImage, 5000); // Auto-slide every 5 seconds
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+  }
+
+  rightArrow.addEventListener('click', () => {
+    nextImage();
+    resetAutoSlide();
+  });
+
+  leftArrow.addEventListener('click', () => {
+    prevImage();
+    resetAutoSlide();
+  });
+
+  // Start auto-slide on page load
+  startAutoSlide();
 </script>
 
 <script>
