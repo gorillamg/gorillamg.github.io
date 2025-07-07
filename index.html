@@ -142,7 +142,33 @@
   <p>&copy; 2025 Gorilla Marketing Group LLC. All rights reserved.</p>
 </footer>
 
-<script src="gorilla-animation.js"></script>
+  <script>
+  const carouselImages = document.querySelector('.carousel-images');
+  const leftArrow = document.querySelector('.left-arrow');
+  const rightArrow = document.querySelector('.right-arrow');
+  const totalImages = document.querySelectorAll('.carousel-img').length;
+  let index = 0;
+
+  function showImage() {
+    carouselImages.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextImage() {
+    index = (index + 1) % totalImages;
+    showImage();
+  }
+
+  function prevImage() {
+    index = (index - 1 + totalImages) % totalImages;
+    showImage();
+  }
+
+  rightArrow.addEventListener('click', nextImage);
+  leftArrow.addEventListener('click', prevImage);
+
+  setInterval(nextImage, 5000); // Auto-slide every 5 seconds
+</script>
+
 <script>
   function toggleMenu() {
     document.getElementById('menu-modal').classList.toggle('show');
