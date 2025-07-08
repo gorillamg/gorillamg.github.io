@@ -494,55 +494,53 @@ footer svg text {
   color: #446d92;
 }
 
-/* === SLICK CAROUSEL CONTAINER === */
-
-.slick-prev::before,
-.slick-next::before {
-  content: none !important;
-  display: none !important;
+/* ===== KILL THE DEFAULT SLICK ARROWS BEFORE ===== */
+.slick-prev:before,
+.slick-next:before {
+  content: "" !important;  /* clear default slick icon */
+  display: none !important;  /* hide it */
 }
 
+/* ===== SLICK CONTAINER ===== */
 .slick-carousel {
-  position: relative;   /* Needed for arrows to position inside it too */
-  overflow: visible;    /* Let arrows overflow if needed */
+  position: relative;
+  overflow: visible;
   border-radius: 12px;
 }
 
-/* SLICK internal wrapper: clips slides cleanly */
+/* ===== Slick Slides Wrapper ===== */
 .slick-list {
   overflow: hidden;
   border-radius: 12px;
 }
 
-/* IMAGES inside carousel */
+/* ===== Images ===== */
 .slick-carousel img {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  display: block;       /* Removes inline gap */
+  display: block;
 }
 
-/* ARROWS basic style */
+/* ===== ARROWS ===== */
 .slick-prev,
 .slick-next {
-  display: block !important;  /* Force override Slick’s default hidden */
+  display: block !important;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
-  
+  font-size: 30px;
+  color: #000000 !important;   /* ← Force black text */
   background: rgba(255, 255, 255, 0.8);
-  color: #000000;
-  border: 2px solid #000000;
+  border: 2px solid #000;
   border-radius: 50%;
   padding: 12px;
   cursor: pointer;
-  font-size: 30px;
-  
+  width: auto;
+  height: auto;
   text-align: center;
   line-height: 1;
-  width: 48px;     /* ensure button area wide enough */
-  height: 48px;    /* ensure button area tall enough */
   font-family: Arial, sans-serif;
 }
 
@@ -551,13 +549,8 @@ footer svg text {
   background: rgba(255, 255, 255, 1);
 }
 
-.slick-prev {
-  left: 10px;
-}
-
-.slick-next {
-  right: 10px;
-}
+.slick-prev { left: 10px; }
+.slick-next { right: 10px; }
 
 /* ==============================
    ABOUT US PAGE
