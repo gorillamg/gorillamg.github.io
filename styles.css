@@ -494,37 +494,35 @@ footer svg text {
   color: #446d92;
 }
 
-/* === Slick Carousel === */
-
-/* Container for your carousel */
+/* === SLICK CAROUSEL CONTAINER === */
 .slick-carousel {
-  position: relative;  /* make sure arrows position relative to this */
-  overflow: hidden;
+  position: relative;   /* Needed for arrows to position inside it too */
+  overflow: visible;    /* Let arrows overflow if needed */
   border-radius: 12px;
 }
 
-/* Force Slick's internal wrapper to clip slides nicely */
+/* SLICK internal wrapper: clips slides cleanly */
 .slick-list {
   overflow: hidden;
   border-radius: 12px;
 }
 
-/* Images inside carousel */
+/* IMAGES inside carousel */
 .slick-carousel img {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  display: block; /* remove default inline gap */
+  display: block;       /* Removes inline gap */
 }
 
-/* Arrows base style */
+/* ARROWS basic style */
 .slick-prev,
 .slick-next {
-  display: block !important;      /* override slick-theme default */
+  display: block !important;  /* Force override Slick’s default hidden */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1000 !important;       /* stay above slides */
+  z-index: 1000;
 
   background: rgba(255, 255, 255, 0.8);
   color: #000000;
@@ -535,25 +533,17 @@ footer svg text {
   font-size: 30px;
 }
 
-/* Hover style for arrows */
 .slick-prev:hover,
 .slick-next:hover {
   background: rgba(255, 255, 255, 1);
 }
 
-/* Left arrow position */
 .slick-prev {
   left: 10px;
 }
 
-/* Right arrow position */
 .slick-next {
   right: 10px;
-}
-
-.slick-slider .slick-prev,
-.slick-slider .slick-next {
-  display: block !important;
 }
 
 /* ==============================
