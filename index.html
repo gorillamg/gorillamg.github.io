@@ -96,15 +96,20 @@
       <a href="contactus.html" class="custom-btn getstarted-btn">Get Started</a>
     </div>
   </div>
-  <div class="responsive-half">
-    <div class="floating-box">
-       <div class="slick-carousel">
-        <div><img src="assets/3.png" alt="Image 1" class="carousel-img"></div>
-        <div><img src="assets/4.png" alt="Image 2" class="carousel-img"></div>
-        <div><img src="assets/2.png" alt="Image 3" class="carousel-img"></div>
-       </div>
+  
+  <!-- Responsive container half -->
+<div class="responsive-half">
+  <!-- Floating box wrapper for styling + arrows positioning -->
+  <div class="floating-box">
+    <!-- Slick carousel -->
+    <div class="slick-carousel">
+      <div><img src="assets/3.png" alt="Image 1"></div>
+      <div><img src="assets/4.png" alt="Image 2"></div>
+      <div><img src="assets/2.png" alt="Image 3"></div>
     </div>
   </div>
+</div>
+  
 </div>
 
 <!-- SECOND BODY SECTION -->
@@ -155,14 +160,11 @@
       arrows: true,
       autoplay: true,
       autoplaySpeed: 5000,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      pauseOnDotsHover: false,
       prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
-      nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
-      pauseOnHover: false
-    });
-
-    // Restart autoplay timer when arrow clicked
-    $('.slick-prev, .slick-next').on('click', function(){
-      $('.slick-carousel').slick('slickPlay');
+      nextArrow: '<button type="button" class="slick-next">&#10095;</button>'
     });
   });
 </script>
