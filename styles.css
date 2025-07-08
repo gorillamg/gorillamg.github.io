@@ -75,6 +75,8 @@ input, textarea, select {
 }
 
 .floating-box {
+  position: relative;
+  overflow: visible; /* critical for absolutely positioned arrows */
   background: #FFFFFF;
   padding: 30px;
   border-radius: 12px;
@@ -511,6 +513,8 @@ footer svg text {
 }
 
 .slick-prev, .slick-next {
+  display: block !important;
+  z-index: 1000 !important;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -521,8 +525,6 @@ footer svg text {
   cursor: pointer;
   font-size: 30px;
   border-radius: 50%;
-  z-index: 10;
-  opacity: 1 !important; /* always visible */
 }
 
 .slick-prev:hover, .slick-next:hover {
