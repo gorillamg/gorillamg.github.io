@@ -492,27 +492,9 @@ footer svg text {
   color: #446d92;
 }
 
-/* === New Carousel Container === */
-.carousel-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 12px;
-}
+/* === slick carousel === */
 
-.carousel-images {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-img {
-  width: 100%;
-  flex-shrink: 0;
-  border-radius: 12px;
-}
-
-/* Arrows */
-.carousel-arrow {
+.slick-prev, .slick-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -526,16 +508,22 @@ footer svg text {
   z-index: 10;
 }
 
-.carousel-arrow:hover {
+.slick-prev:hover, .slick-next:hover {
   background: rgba(71, 71, 71, 0.8);
 }
 
-.left-arrow {
+.slick-prev {
   left: 10px;
 }
 
-.right-arrow {
+.slick-next {
   right: 10px;
+}
+
+.slick-carousel img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
 }
 
 /* ==============================
