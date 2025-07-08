@@ -494,27 +494,19 @@ footer svg text {
   color: #446d92;
 }
 
-/* ===== KILL THE DEFAULT SLICK ARROWS BEFORE ===== */
-.slick-prev:before,
-.slick-next:before {
-  content: "" !important;  /* clear default slick icon */
-  display: none !important;  /* hide it */
-}
+/* ======= Slick Carousel Arrow Buttons with Font Awesome ======= */
 
-/* ===== SLICK CONTAINER ===== */
 .slick-carousel {
   position: relative;
   overflow: visible;
   border-radius: 12px;
 }
 
-/* ===== Slick Slides Wrapper ===== */
 .slick-list {
   overflow: hidden;
   border-radius: 12px;
 }
 
-/* ===== Images ===== */
 .slick-carousel img {
   width: 100%;
   height: auto;
@@ -522,7 +514,14 @@ footer svg text {
   display: block;
 }
 
-/* ===== ARROWS ===== */
+/* Kill default icon */
+.slick-prev::before,
+.slick-next::before {
+  display: none !important;
+  content: '' !important;
+}
+
+/* Arrow button container */
 .slick-prev,
 .slick-next {
   display: block !important;
@@ -530,18 +529,15 @@ footer svg text {
   top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
-  font-size: 30px;
-  color: #000000 !important;   /* ← Force black text */
+
   background: rgba(255, 255, 255, 0.8);
-  border: 2px solid #000;
+  border: 2px solid #000000;
   border-radius: 50%;
-  padding: 12px;
+  width: 48px;
+  height: 48px;
   cursor: pointer;
-  width: auto;
-  height: auto;
   text-align: center;
   line-height: 1;
-  font-family: Arial, sans-serif;
 }
 
 .slick-prev:hover,
@@ -549,8 +545,18 @@ footer svg text {
   background: rgba(255, 255, 255, 1);
 }
 
+/* Left and right positioning */
 .slick-prev { left: 10px; }
 .slick-next { right: 10px; }
+
+/* Style the Font Awesome arrow icon inside */
+.slick-prev i,
+.slick-next i {
+  color: #000000 !important;
+  font-size: 24px;
+  line-height: 48px;
+  display: inline-block;
+}
 
 /* ==============================
    ABOUT US PAGE
