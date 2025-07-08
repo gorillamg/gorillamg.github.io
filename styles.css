@@ -496,9 +496,9 @@ footer svg text {
 
 /* === SLICK CAROUSEL CONTAINER === */
 
-/* remove slick's default icons */
 .slick-prev::before,
 .slick-next::before {
+  content: none !important;
   display: none !important;
 }
 
