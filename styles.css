@@ -494,49 +494,66 @@ footer svg text {
   color: #446d92;
 }
 
-/* === slick carousel === */
+/* === Slick Carousel === */
 
+/* Container for your carousel */
 .slick-carousel {
+  position: relative;  /* make sure arrows position relative to this */
   overflow: hidden;
   border-radius: 12px;
 }
 
+/* Force Slick's internal wrapper to clip slides nicely */
 .slick-list {
   overflow: hidden;
   border-radius: 12px;
 }
 
+/* Images inside carousel */
 .slick-carousel img {
   width: 100%;
   height: auto;
   border-radius: 12px;
+  display: block; /* remove default inline gap */
 }
 
-.slick-prev, .slick-next {
-  display: block !important;
-  z-index: 1000 !important;
+/* Arrows base style */
+.slick-prev,
+.slick-next {
+  display: block !important;      /* override slick-theme default */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 1000 !important;       /* stay above slides */
+
   background: rgba(255, 255, 255, 0.8);
   color: #000000;
   border: 2px solid #000000;
+  border-radius: 50%;
   padding: 12px;
   cursor: pointer;
   font-size: 30px;
-  border-radius: 50%;
 }
 
-.slick-prev:hover, .slick-next:hover {
+/* Hover style for arrows */
+.slick-prev:hover,
+.slick-next:hover {
   background: rgba(255, 255, 255, 1);
 }
 
+/* Left arrow position */
 .slick-prev {
   left: 10px;
 }
 
+/* Right arrow position */
 .slick-next {
   right: 10px;
+}
+
+.slick-slider .slick-prev,
+.slick-slider .slick-next {
+  display: block !important;
 }
 
 /* ==============================
