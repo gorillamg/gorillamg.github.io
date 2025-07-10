@@ -401,6 +401,7 @@ footer svg text {
   flex-wrap: wrap;
   justify-content: center;
   padding: 40px;
+  gap: 20px;
 }
 
 .second-part-box {
