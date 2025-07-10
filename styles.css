@@ -55,7 +55,7 @@ input, textarea, select {
 }
 
 .responsive-half {
-  flex: 1 1 500px;
+  flex: 1 1 600px;
   max-width: 50%;
   display: flex;
   justify-content: center;
@@ -80,6 +80,7 @@ input, textarea, select {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   max-width: 600px;
+  max-height: 600px;
   text-align: center;
   box-sizing: border-box;
 }
@@ -739,8 +740,8 @@ footer svg text {
 /* SERVICES PAGE */
 
 .responsive-img {
-  max-width: 600px;
-  max-height: 600px;
+  max-width: 400px;
+  max-height: 400px;
   display: block;
   border-radius: 12px;
 }
@@ -865,9 +866,9 @@ footer svg text {
 
 #gorillacares-third-left,
 #gorillacares-third-right {
-  flex: 1 1 500px;
-  max-width: 600px;
-  max-height: 600px;
+  flex: 1 1 400px;
+  max-width: 500px;
+  max-height: 500px;
 }
 
 #gorillacares-third h1 {
