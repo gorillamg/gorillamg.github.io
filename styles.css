@@ -739,8 +739,8 @@ footer svg text {
 /* SERVICES PAGE */
 
 .responsive-img {
-  width: 100%;
-  height: auto;
+  max-width: 600px;
+  max-height: 600px;
   display: block;
   border-radius: 12px;
 }
@@ -866,8 +866,8 @@ footer svg text {
 #gorillacares-third-left,
 #gorillacares-third-right {
   flex: 1 1 500px;
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 600px;
+  max-height: 600px;
 }
 
 #gorillacares-third h1 {
