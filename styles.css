@@ -62,6 +62,7 @@ input, textarea, select {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  gap: 60px;
 }
 
 @media (max-width: 900px) {
