@@ -53,7 +53,6 @@ input, textarea, select {
   padding: 40px;
   box-sizing: border-box;
   padding-top: 160px;
-  gap: 60px;
 }
 
 .responsive-half {
