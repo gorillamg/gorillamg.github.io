@@ -399,7 +399,6 @@ footer svg text {
   display: flex;
   background-color: #24496b;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
   padding: 40px;
 }
