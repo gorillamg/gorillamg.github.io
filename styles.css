@@ -837,7 +837,6 @@ footer svg text {
 #gorillacares-second {
   background-color: #24496b;
   text-align: center;
-  padding: 30px;
 }
 
 #gorillacares-second h1 {
@@ -865,7 +864,6 @@ footer svg text {
   justify-content: center;
   gap: 40px;
   background-color: #24496b;
-  padding: 60px 40px;
 }
 
 #gorillacares-third-left,
