@@ -1003,6 +1003,7 @@ footer svg text {
 
 /* RIGHT Floating Box (Form) */
 .contactus-form-box {
+  position: relative;
   background-color: #FFFFFF;
   padding: 30px;
   border-radius: 12px;
