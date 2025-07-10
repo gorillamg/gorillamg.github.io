@@ -866,9 +866,10 @@ footer svg text {
 
 #gorillacares-third-left,
 #gorillacares-third-right {
-  flex: 1 1 400px;
-  max-width: 500px;
-  max-height: 500px;
+  flex: 1 1 500px;
+  max-width: 600px;
+  max-height: 600px;
+  position: relative;
 }
 
 #gorillacares-third h1 {
