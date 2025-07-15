@@ -62,7 +62,7 @@ input, textarea, select {
   box-sizing: border-box;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 750px) {
   .responsive-section {
     flex-direction: column;
   }
@@ -82,7 +82,7 @@ input, textarea, select {
   box-sizing: border-box;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 750px) {
   .floating-box {
     max-width: 100%;
   }
@@ -200,7 +200,7 @@ nav#navbar {
   font-weight: bold;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
   #desktop-nav-left, .linkedin-icon {
     display: none;
   }
