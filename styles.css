@@ -346,6 +346,39 @@ footer svg {
   margin-right: 10px;
 }
 
+/* === Index page - Second body section === */
+.second-section {
+  display: flex;
+  background-color: #24496b;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.second-part-box {
+  background-color: #FFFFFF;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  flex: 1 1 500px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.second-part-box h1 {
+  font-weight: bold;
+  color: #071f35;
+  margin-bottom: 20px;
+}
+
+.second-part-box h2 {
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
 /* ==============================
    ABOUT US — LinkedIn box icon size fix
 ============================== */
