@@ -577,7 +577,7 @@ footer svg {
   color: #000000;
   background-color: #f7fafe;
   border: 2px solid #446d92;
-  border-radius: 6px;
+  border-radius: 15px;
   cursor: pointer;
   width: 100%;
 }
@@ -602,9 +602,9 @@ footer svg {
   margin: 10% auto;
   padding: 20px;
   border: 2px solid #071f35;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 8px;
+  min-width: 75%;
+  max-width: 90%;
+  border-radius: 20px;
   text-align: center;
 }
 
