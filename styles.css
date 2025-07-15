@@ -309,7 +309,7 @@ nav#navbar {
 .logo-svg .logo-text {
   font-family: 'Permanent Marker', cursive;
   fill: #071f35;
-  font-weight: 400; /* ✅ Ensures nav + footer logo have same thickness */
+  font-weight: regular; /* ✅ Ensures nav + footer logo have same thickness */
 }
 
 .logo-svg:hover .logo-text {
@@ -318,7 +318,7 @@ nav#navbar {
 
 footer svg .logo-text {
   fill: #FFFFFF !important;
-  font-weight: 400; /* ✅ Footer matches nav thickness */
+  font-weight: regular; /* ✅ Footer matches nav thickness */
 }
 
 footer {
