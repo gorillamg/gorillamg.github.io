@@ -308,21 +308,16 @@ nav#navbar {
 ============================== */
 .logo-svg .logo-text {
   font-family: 'Permanent Marker', cursive;
-  fill: #071f35 !important;
-  font-weight: normal !important;
-  stroke: none !important; 
+  font-weight: normal;
+  fill: #071f35;
+  stroke: none;
 }
 
 .logo-svg:hover .logo-text {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: normal;
   fill: #000000;
-  font-weight: normal !important;
-  stroke: none !important;
-}
-
-footer svg .logo-text {
-  fill: #FFFFFF !important;
-  font-weight: normal !important;
-  stroke: none !important;
+  stroke: none;
 }
 
 footer {
@@ -335,6 +330,15 @@ footer {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+}
+
+footer svg .logo-text,
+footer svg text {
+  fill: #FFFFFF !important;
+  stroke: none !important;
+  font-weight: normal;
+  pointer-events: none;
+  font-family: 'Permanent Marker', cursive;
 }
 
 footer svg {
