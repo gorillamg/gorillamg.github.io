@@ -405,7 +405,7 @@ footer svg {
 .contact-line {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   margin: 10px 0;
   text-align: center;
 }
