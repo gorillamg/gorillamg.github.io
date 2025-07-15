@@ -308,17 +308,21 @@ nav#navbar {
 ============================== */
 .logo-svg .logo-text {
   font-family: 'Permanent Marker', cursive;
-  fill: #071f35;
-  font-weight: regular; /* ✅ Ensures nav + footer logo have same thickness */
+  fill: #071f35 !important;
+  font-weight: normal !important;
+  stroke: none !important; 
 }
 
 .logo-svg:hover .logo-text {
-  fill: #000000;
+  fill: #000000 !important;
+  font-weight: normal !important;
+  stroke: none !important;
 }
 
 footer svg .logo-text {
   fill: #FFFFFF !important;
-  font-weight: regular; /* ✅ Footer matches nav thickness */
+  font-weight: normal !important;
+  stroke: none !important;
 }
 
 footer {
