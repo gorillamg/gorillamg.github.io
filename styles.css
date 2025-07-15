@@ -529,11 +529,11 @@ footer svg {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.8);
-  border: 2px solid #000000;
+  background-color: #24496b;
+  border: 2px solid #f7fafe;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   z-index: 1000;
   text-align: center;
@@ -541,7 +541,7 @@ footer svg {
 
 .slick-prev:hover,
 .slick-next:hover {
-  background: rgba(255, 255, 255, 1);
+  background-color: #98b1c8;
 }
 
 .slick-prev { left: 10px; }
@@ -549,14 +549,14 @@ footer svg {
 
 .slick-prev i,
 .slick-next i {
-  color: #071f35 !important;
-  font-size: 24px;
-  line-height: 48px;
+  color: #f7fafe !important;
+  font-size: 30px;
+  line-height: 50px;
 }
 
 .slick-prev:hover i,
 .slick-next:hover i {
-  color: #000000 !important;
+  color: #98b1c8 !important;
 }
 
 /* ==============================
