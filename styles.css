@@ -314,7 +314,7 @@ nav#navbar {
 }
 
 .logo-svg:hover .logo-text {
-  fill: #000000 !important;
+  fill: #000000;
   font-weight: normal !important;
   stroke: none !important;
 }
