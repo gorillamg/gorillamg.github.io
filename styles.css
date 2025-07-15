@@ -683,13 +683,13 @@ footer svg {
 
 .contactus-form-box {
   background-color: #FFFFFF;
-  padding: 30px 30px; /* ✅ Problem 7 fix: left & right padding same */
+  padding: 30px 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
   max-width: 600px;
-  width: auto;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .contactus-form-box h2 {
