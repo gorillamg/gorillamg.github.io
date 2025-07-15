@@ -602,15 +602,15 @@ footer svg {
   margin: 10% auto;
   padding: 20px;
   border: 2px solid #071f35;
-  min-width: 75%;
-  max-width: 90%;
+  min-width: 60%;
+  max-width: 75%;
   border-radius: 20px;
   text-align: center;
 }
 
 @media (max-width: 500px) {
   .modal-content {
-    width: 90%; /* ✅ Problem 5 fix: never 100% on smallest screens */
+    max-width: 75%; /* ✅ Problem 5 fix: never 100% on smallest screens */
   }
 }
 
