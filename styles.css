@@ -62,7 +62,7 @@ input, textarea, select {
   box-sizing: border-box;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .responsive-section {
     flex-direction: column;
   }
@@ -82,7 +82,7 @@ input, textarea, select {
   box-sizing: border-box;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .floating-box {
     max-width: 100%;
   }
@@ -200,7 +200,7 @@ nav#navbar {
   font-weight: bold;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   #desktop-nav-left, .linkedin-icon {
     display: none;
   }
@@ -602,7 +602,7 @@ footer svg {
   text-align: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .modal-content {
     max-width: 75%; /* ✅ Problem 5 fix: never 100% on smallest screens */
   }
