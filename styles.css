@@ -164,7 +164,7 @@ nav#navbar {
   font-size: 30px;
   color: #FFFFFF;
   background-color: #0077B5;
-  border-radius: 50%;
+  border-radius: 5px;
   width: 50px;
   height: 50px;
   display: flex;
@@ -386,11 +386,11 @@ footer svg {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 50px; /* ✅ Same size as nav icon */
+  width: 50px; 
   height: 50px;
   background-color: #0077B5;
   color: #FFFFFF;
-  border-radius: 5px; /* ✅ Square shape is fine */
+  border-radius: 50%; 
   font-size: 30px;
   text-decoration: none;
   font-weight: bold;
