@@ -332,8 +332,7 @@ footer {
   font-weight: bold;
 }
 
-footer svg .logo-text,
-footer svg text {
+footer svg .logo-text {
   fill: #FFFFFF !important;
   stroke: none !important;
   font-weight: normal;
