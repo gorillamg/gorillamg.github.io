@@ -231,16 +231,34 @@
 
   </svg>
 </div>
+  
+</main>
+  
+<!-- FOOTER -->
+<footer>
+  <svg class="logo-svg" width="260px" height="120px" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+    <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" style="font-size: 38px;" class="logo-text">Gorilla</text>
+    <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" style="font-size: 20px;" class="logo-text">Marketing Group</text>
+  </svg>
+  <p>&copy; 2025 Gorilla Marketing Group, LLC. All Rights Reserved.</p>
+</footer>
 
+<!-- MENU SCRIPT -->
 <script>
+  function toggleMenu() {
+    document.getElementById('menu-modal').classList.toggle('show');
+  }
+</script>
+
+  <script>
   window.addEventListener('DOMContentLoaded', () => {
     const svg = document.getElementById('gmg-logo');
     const paths = svg.querySelectorAll('path');
 
     paths.forEach((path, index) => {
       const length = path.getTotalLength();
-      path.style.stroke = "#000000"; // pure black
-      path.style.fill = "none";      // no fill
+      path.style.stroke = "#000000"; // Black stroke
+      path.style.fill = "none";      // No fill during animation
       path.style.strokeWidth = "2";
       path.style.strokeDasharray = length;
       path.style.strokeDashoffset = length;
@@ -261,24 +279,6 @@
   document.head.appendChild(style);
 </script>
   
-</main>
-  
-<!-- FOOTER -->
-<footer>
-  <svg class="logo-svg" width="260px" height="120px" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
-    <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" style="font-size: 38px;" class="logo-text">Gorilla</text>
-    <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" style="font-size: 20px;" class="logo-text">Marketing Group</text>
-  </svg>
-  <p>&copy; 2025 Gorilla Marketing Group, LLC. All Rights Reserved.</p>
-</footer>
-
-<!-- MENU SCRIPT -->
-<script>
-  function toggleMenu() {
-    document.getElementById('menu-modal').classList.toggle('show');
-  }
-</script>
-
 </body>
 </html>
 
