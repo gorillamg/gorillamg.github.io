@@ -83,7 +83,7 @@
     
   </section>
 
-    <!-- Animated Inline SVG Logo -->
+    <!-- 🔽 Animated Inline SVG Logo -->
 <div id="logo-animation-wrapper" style="margin-top: 40px; display: flex; justify-content: center;">
   <svg id="gmg-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 2000" style="width: 90%; max-width: 800px; height: auto;">
     
@@ -252,18 +252,18 @@
 
   <script>
   window.addEventListener('DOMContentLoaded', () => {
-    const paths = document.querySelectorAll('#gmg-logo path');
+    const svg = document.getElementById('gmg-logo');
+    const paths = svg.querySelectorAll('path');
 
     paths.forEach((path, index) => {
       const length = path.getTotalLength();
-
-      path.style.stroke = '#071f35';
-      path.style.fill = 'none';
-      path.style.strokeWidth = '20';
+      path.style.stroke = "#071f35";
+      path.style.fill = "none";
+      path.style.strokeWidth = "16";
       path.style.strokeDasharray = length;
       path.style.strokeDashoffset = length;
-      path.style.animation = `drawLetter 0.6s ease-out forwards, fillLetter 0.6s ease-out forwards`;
-      path.style.animationDelay = `${index * 0.3}s, ${index * 0.3 + 0.3}s`;
+      path.style.animation = `drawLetter 3s ease forwards, fillLetter 1s ease forwards`;
+      path.style.animationDelay = `${index * 0.4}s, ${index * 0.4 + 3}s`;
     });
 
     const style = document.createElement('style');
@@ -275,11 +275,11 @@
       }
 
       @keyframes fillLetter {
-        from {
+        0% {
           fill: transparent;
         }
-        to {
-          fill: #1B0B26;
+        100% {
+          fill: #071f35;
         }
       }
     `;
