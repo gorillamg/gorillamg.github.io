@@ -697,17 +697,15 @@ footer svg {
   font-weight: bold;
 }
 
-.contactus-form-box input,
-.contactus-form-box select,
-.contactus-form-box textarea {
-  width: 100%;
+/* === CONTACT FORM FIELD FOCUS FIXES === */
+.contactus-form-box input:focus,
+.contactus-form-box select:focus,
+.contactus-form-box textarea:focus {
   padding: 10px;
-  box-sizing: border-box;
-  border: 3px solid #98b1c8;
+  border: 3px solid #071f35;
   border-radius: 6px !important;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 12px;
+  outline: none;
+  box-sizing: border-box;
 }
 
 .contactus-form-box textarea {
