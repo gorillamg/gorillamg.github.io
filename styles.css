@@ -36,7 +36,7 @@ input, textarea, select {
   width: 100%;
   margin: 5px 0;
   padding: 10px;
-  border: 2px solid #1B0B26;
+  border: 3px solid #1B0B26;
   border-radius: 5px;
   font-size: 20px;
   font-weight: bold;
@@ -703,6 +703,8 @@ footer svg {
   margin: 10px 0 5px;
   color: #000000;
   text-align: left;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .contactus-form-box input,
@@ -711,9 +713,11 @@ footer svg {
   min-width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #98b1c8;
+  border: 3px solid #98b1c8;
   border-radius: 6px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .contactus-form-box textarea {
