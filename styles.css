@@ -38,7 +38,7 @@ input, textarea, select {
   padding: 10px;
   border: 2px solid #1B0B26;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -54,7 +54,7 @@ input, textarea, select {
 }
 
 .responsive-half {
-  flex: 1 1 650px;
+  flex: 1 1 500px;
   max-width: 50%;
   display: flex;
   justify-content: center;
@@ -77,7 +77,7 @@ input, textarea, select {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  max-width: 650px;
+  max-width: 500px;
   text-align: center;
   box-sizing: border-box;
 }
@@ -422,13 +422,13 @@ footer svg {
   color: #000000;
   margin-right: 10px;
   font-size: 20px;
-  border: 2px solid #446d92;
+  border: 3px solid #446d92;
   text-decoration: none !important; /* ✅ Ensures no link underline */
 }
 
 .icon-circle:hover {
   background-color: #98b1c8;
-  border: 2px solid #071f35;
+  border: 3px solid #071f35;
 }
 
 /* ==============================
@@ -448,18 +448,18 @@ footer svg {
 
 .btn1 {
   background-color: #f7fafe;
-  border: 2px solid #446d92;
+  border: 3px solid #446d92;
 }
 
 .btn1:hover {
   background-color: #98b1c8;
-  border: 2px solid #071f35;
+  border: 3px solid #071f35;
 }
 
 .getstarted-btn {
   background-color: #f7fafe;
   color: #000000;
-  border: 2px solid #446d92;
+  border: 3px solid #446d92;
   padding: 10px 20px;
   font-size: 20px;
   font-weight: bold;
@@ -471,7 +471,7 @@ footer svg {
 
 .getstarted-btn:hover {
   background-color: #98b1c8;
-  border: 2px solid #071f35;
+  border: 3px solid #071f35;
 }
 
 .elite-link {
@@ -531,7 +531,7 @@ footer svg {
   top: 50%;
   transform: translateY(-50%);
   background-color: #24496b;
-  border: 2px solid #f7fafe;
+  border: 3px solid #f7fafe;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -561,17 +561,17 @@ footer svg {
 }
 
 /* ==============================
-   SERVICES MODALS (Problem 5)
+   SERVICES MODALS 
 ============================== */
 
 .modal-btn {
   margin: 10px 0;
-  padding: 12px 22px;
+  padding: 10px 20px;
   font-size: 20px;
   font-weight: bold;
   color: #000000;
   background-color: #f7fafe;
-  border: 2px solid #446d92;
+  border: 3px solid #446d92;
   border-radius: 15px;
   cursor: pointer;
   width: 100%;
@@ -579,7 +579,7 @@ footer svg {
 
 .modal-btn:hover {
   background-color: #98b1c8;
-  border: 2px solid #071f35;
+  border: 3px solid #071f35;
 }
 
 .modal {
@@ -596,8 +596,8 @@ footer svg {
   background-color: #FFFFFF;
   margin: 10% auto;
   padding: 20px;
-  border: 2px solid #071f35;
-  min-width: 60%;
+  border: 3px solid #071f35;
+  min-width: 50%;
   max-width: 75%;
   border-radius: 20px;
   text-align: center;
@@ -634,16 +634,17 @@ footer svg {
   background-color: #24496b;
   padding: 10px;
   border-radius: 12px;
-  max-width: 650px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
 #gorillacares-second h1 {
   color: #FFFFFF;
+  font-weight: bold;
 }
 
 #donation-amount {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
   color: #FFFFFF;
   margin-top: 20px;
@@ -659,8 +660,8 @@ footer svg {
 
 #gorillacares-third-left,
 #gorillacares-third-right {
-  flex: 1 1 650px;
-  max-width: 650px;
+  flex: 1 1 500px;
+  max-width: 500px;
 }
 
 #gorillacares-third h1 {
@@ -670,10 +671,11 @@ footer svg {
 
 #gorillacares-third h2 {
   color: #000000;
+  font-weight: bold;
 }
 
 /* ==============================
-   CONTACT US FORM (Problem 7)
+   CONTACT US FORM 
 ============================== */
 
 .contactus-form-box {
@@ -682,13 +684,13 @@ footer svg {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   width: 100%;
-  max-width: 650px;
+  max-width: 500px;
   box-sizing: border-box;
   margin: 0;
 }
 
 .contactus-form-box h2 {
-  font-size: 22px;
+  font-size: 30px;
   font-weight: bold;
   color: #071f35;
   text-align: center;
@@ -701,6 +703,7 @@ footer svg {
   margin: 10px 0 5px;
   color: #000000;
   text-align: left;
+  font-size: 20px;
 }
 
 .contactus-form-box input,
@@ -709,9 +712,11 @@ footer svg {
   min-width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 2px solid #98b1c8;
+  border: 3px solid #98b1c8;
   border-radius: 6px;
   box-sizing: border-box;
+  font-size: 20px:
+  font-weight: bold; 
 }
 
 .contactus-form-box textarea {
@@ -722,12 +727,12 @@ footer svg {
 
 .submit-btn {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   border-radius: 5px;
   background-color: #f7fafe;
   color: #000000;
-  border: 2px solid #446d92;
+  border: 3px solid #446d92;
   display: block;
   margin: 10px auto 0 auto;
   cursor: pointer;
@@ -735,5 +740,5 @@ footer svg {
 
 .submit-btn:hover {
   background-color: #98b1c8;
-  border: 2px solid #071f35;
+  border: 3px solid #071f35;
 }
