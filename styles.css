@@ -703,7 +703,6 @@ footer svg {
   margin: 10px 0 5px;
   color: #000000;
   text-align: left;
-  font-size: 20px;
 }
 
 .contactus-form-box input,
@@ -712,11 +711,9 @@ footer svg {
   min-width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 3px solid #98b1c8;
+  border: 1px solid #98b1c8;
   border-radius: 6px;
-  box-sizing: border-box;
-  font-size: 20px:
-  font-weight: bold; 
+  box-sizing: border-box; 
 }
 
 .contactus-form-box textarea {
