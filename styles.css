@@ -535,8 +535,8 @@ footer svg {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.8);
-  border: 2px solid #000000;
+  background-color: #ffffff;
+  border: 2px solid #ffffff; 
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -547,7 +547,7 @@ footer svg {
 
 .slick-prev:hover,
 .slick-next:hover {
-  background: rgba(255, 255, 255, 1);
+  background-color: #98b1c8;
 }
 
 .slick-prev { left: 10px; }
@@ -555,14 +555,14 @@ footer svg {
 
 .slick-prev i,
 .slick-next i {
-  color: #071f35 !important;
+  color: #f7fafe !important;
   font-size: 24px;
   line-height: 48px;
 }
 
 .slick-prev:hover i,
 .slick-next:hover i {
-  color: #000000 !important;
+  color: #98b1c8 !important;
 }
 
 /* ==============================
@@ -716,6 +716,8 @@ footer svg {
   margin-bottom: 15px;
   border: 2px solid #98b1c8;
   border-radius: 6px;
+  max-width: 100%;
+  box-sizing: border-box; 
 }
 
 .contactus-form-box textarea {
