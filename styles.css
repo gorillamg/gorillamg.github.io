@@ -21,7 +21,7 @@ main {
 
 h1 {
   margin: 20px 0;
-  font-size: 28px;
+  font-size: 30px;
   color: #071f35;
   font-weight: bold;
 }
@@ -377,7 +377,7 @@ footer svg {
   font-weight: bold;
   color: #000000;
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 /* ==============================
@@ -437,7 +437,7 @@ footer svg {
 
 .custom-btn {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   border-radius: 5px;
   text-decoration: none;
@@ -461,7 +461,7 @@ footer svg {
   color: #000000;
   border: 2px solid #446d92;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   border-radius: 5px;
   text-decoration: none;
@@ -603,9 +603,9 @@ footer svg {
   text-align: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   .modal-content {
-    max-width: 75%; /* ✅ Problem 5 fix: never 100% on smallest screens */
+    max-width: 75%; 
   }
 }
 
@@ -634,7 +634,7 @@ footer svg {
   background-color: #24496b;
   padding: 10px;
   border-radius: 12px;
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
 }
 
@@ -659,8 +659,8 @@ footer svg {
 
 #gorillacares-third-left,
 #gorillacares-third-right {
-  flex: 1 1 600px;
-  max-width: 600px;
+  flex: 1 1 650px;
+  max-width: 650px;
 }
 
 #gorillacares-third h1 {
@@ -682,7 +682,7 @@ footer svg {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
   box-sizing: border-box;
   margin: 0;
 }
