@@ -254,32 +254,36 @@
     const svg = document.getElementById('gmg-logo');
     const paths = svg.querySelectorAll('path');
 
-    paths.forEach((path, index) => {
-      const length = path.getTotalLength();
+    window.requestAnimationFrame(() => {
+      paths.forEach((path, index) => {
+        const length = path.getTotalLength();
 
-      path.style.stroke = '#1B0B26';         // Sharpie color
-      path.style.fill = '#1B0B26';           // Fill as it writes
-      path.style.strokeWidth = '2';
-      path.style.strokeDasharray = length;
-      path.style.strokeDashoffset = length;
-      path.style.animation = `write 1s ease-out forwards`;
-      path.style.animationDelay = `${index * 0.25}s`;
+        path.style.stroke = '#071f35';            
+        path.style.strokeWidth = '100';            
+        path.style.fill = 'none';                 
+        path.style.strokeLinecap = 'round';
+        path.style.strokeLinejoin = 'round';
+        path.style.strokeDasharray = length;
+        path.style.strokeDashoffset = length;
+        path.style.transition = 'none';
+
+        requestAnimationFrame(() => {
+          path.style.transition = '';
+          path.style.animation = `drawLetter 0.6s ease-out forwards ${index * 0.3}s`;
+        });
+      });
     });
-  });
 
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes write {
-      to {
-        stroke-dashoffset: 0;
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes drawLetter {
+        to {
+          stroke-dashoffset: 0;
+        }
       }
-    }
-
-    #gmg-logo path {
-      fill-opacity: 1;
-    }
-  `;
-  document.head.appendChild(style);
+    `;
+    document.head.appendChild(style);
+  });
 </script>
   
 </body>
