@@ -21,7 +21,7 @@ main {
 
 h1 {
   margin: 20px 0;
-  font-size: 30px;
+  font-size: 28px;
   color: #071f35;
   font-weight: bold;
 }
@@ -29,6 +29,16 @@ h1 {
 h2 {
   font-size: 20px;
   color: #000000;
+  font-weight: bold;
+}
+
+input, textarea, select {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  border: 2px solid #1B0B26;
+  border-radius: 5px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -44,7 +54,7 @@ h2 {
 }
 
 .responsive-half {
-  flex: 1 1 500px;
+  flex: 1 1 600px;
   max-width: 50%;
   display: flex;
   justify-content: center;
@@ -52,7 +62,7 @@ h2 {
   box-sizing: border-box;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .responsive-section {
     flex-direction: column;
   }
@@ -67,12 +77,12 @@ h2 {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  max-width: 500px;
+  max-width: 600px;
   text-align: center;
   box-sizing: border-box;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .floating-box {
     max-width: 100%;
   }
@@ -190,7 +200,7 @@ nav#navbar {
   font-weight: bold;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
   #desktop-nav-left, .linkedin-icon {
     display: none;
   }
@@ -284,9 +294,8 @@ nav#navbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
+  border-radius: 50%;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .menu-modal-links .linkedin-icon:hover {
@@ -315,7 +324,7 @@ footer {
   background-color: #071f35;
   padding: 20px;
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
   color: #FFFFFF;
   display: flex;
   justify-content: center;
@@ -367,7 +376,7 @@ footer svg {
   font-weight: bold;
   color: #000000;
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 /* ==============================
@@ -412,13 +421,13 @@ footer svg {
   color: #000000;
   margin-right: 10px;
   font-size: 20px;
-  border: 3px solid #446d92;
+  border: 2px solid #446d92;
   text-decoration: none !important; /* ✅ Ensures no link underline */
 }
 
 .icon-circle:hover {
   background-color: #98b1c8;
-  border: 3px solid #071f35;
+  border: 2px solid #071f35;
 }
 
 /* ==============================
@@ -427,7 +436,7 @@ footer svg {
 
 .custom-btn {
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   border-radius: 5px;
   text-decoration: none;
@@ -438,20 +447,20 @@ footer svg {
 
 .btn1 {
   background-color: #f7fafe;
-  border: 3px solid #446d92;
+  border: 2px solid #446d92;
 }
 
 .btn1:hover {
   background-color: #98b1c8;
-  border: 3px solid #071f35;
+  border: 2px solid #071f35;
 }
 
 .getstarted-btn {
   background-color: #f7fafe;
   color: #000000;
-  border: 3px solid #446d92;
+  border: 2px solid #446d92;
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   border-radius: 5px;
   text-decoration: none;
@@ -461,7 +470,7 @@ footer svg {
 
 .getstarted-btn:hover {
   background-color: #98b1c8;
-  border: 3px solid #071f35;
+  border: 2px solid #071f35;
 }
 
 .elite-link {
@@ -486,6 +495,12 @@ footer svg {
   text-decoration: underline;
   text-decoration-color: #006400;
   text-decoration-thickness: 3px;
+}
+
+.gorilla-word {
+  font-style: italic;
+  font-weight: bold;
+  color: #24496b;
 }
 
 /* ==============================
@@ -520,11 +535,11 @@ footer svg {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #24496b;
-  border: 3px solid #f7fafe;
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #000000;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   cursor: pointer;
   z-index: 1000;
   text-align: center;
@@ -532,7 +547,7 @@ footer svg {
 
 .slick-prev:hover,
 .slick-next:hover {
-  background-color: #98b1c8;
+  background: rgba(255, 255, 255, 1);
 }
 
 .slick-prev { left: 10px; }
@@ -540,28 +555,28 @@ footer svg {
 
 .slick-prev i,
 .slick-next i {
-  color: #f7fafe !important;
-  font-size: 30px;
-  line-height: 50px;
+  color: #071f35 !important;
+  font-size: 24px;
+  line-height: 48px;
 }
 
 .slick-prev:hover i,
 .slick-next:hover i {
-  color: #98b1c8 !important;
+  color: #000000 !important;
 }
 
 /* ==============================
-   SERVICES MODALS 
+   SERVICES MODALS (Problem 5)
 ============================== */
 
 .modal-btn {
   margin: 10px 0;
-  padding: 10px 20px;
-  font-size: 20px;
+  padding: 12px 20px;
+  font-size: 18px;
   font-weight: bold;
   color: #000000;
   background-color: #f7fafe;
-  border: 3px solid #446d92;
+  border: 2px solid #446d92;
   border-radius: 15px;
   cursor: pointer;
   width: 100%;
@@ -569,7 +584,7 @@ footer svg {
 
 .modal-btn:hover {
   background-color: #98b1c8;
-  border: 3px solid #071f35;
+  border: 2px solid #071f35;
 }
 
 .modal {
@@ -586,15 +601,16 @@ footer svg {
   background-color: #FFFFFF;
   margin: 10% auto;
   padding: 20px;
-  border: 3px solid #071f35;
-  max-width: 70%;
+  border: 2px solid #071f35;
+  min-width: 60%;
+  max-width: 75%;
   border-radius: 20px;
   text-align: center;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   .modal-content {
-    max-width: 70%; 
+    max-width: 75%; /* ✅ Problem 5 fix: never 100% on smallest screens */
   }
 }
 
@@ -623,17 +639,16 @@ footer svg {
   background-color: #24496b;
   padding: 10px;
   border-radius: 12px;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
 #gorillacares-second h1 {
   color: #FFFFFF;
-  font-weight: bold;
 }
 
 #donation-amount {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
   color: #FFFFFF;
   margin-top: 20px;
@@ -649,8 +664,8 @@ footer svg {
 
 #gorillacares-third-left,
 #gorillacares-third-right {
-  flex: 1 1 500px;
-  max-width: 500px;
+  flex: 1 1 600px;
+  max-width: 600px;
 }
 
 #gorillacares-third h1 {
@@ -660,11 +675,10 @@ footer svg {
 
 #gorillacares-third h2 {
   color: #000000;
-  font-weight: bold;
 }
 
 /* ==============================
-   CONTACT US FORM 
+   CONTACT US FORM (Problem 7)
 ============================== */
 
 .contactus-form-box {
@@ -672,16 +686,14 @@ footer svg {
   padding: 30px 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  max-width: 600px !important;
+  width: 100%;
+  max-width: 600px;
   box-sizing: border-box;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .contactus-form-box h2 {
-  font-size: 30px;
+  font-size: 22px;
   font-weight: bold;
   color: #071f35;
   text-align: center;
@@ -694,34 +706,16 @@ footer svg {
   margin: 10px 0 5px;
   color: #000000;
   text-align: left;
-  font-size: 20px;
-  font-weight: bold;
 }
 
-/* === CONTACT FORM FIELD DEFAULT STATE === */
 .contactus-form-box input,
 .contactus-form-box select,
 .contactus-form-box textarea {
   width: 100%;
   padding: 10px;
-  box-sizing: border-box;
-  border: 3px solid #446d92; 
-  border-radius: 6px !important;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 12px;
-  outline: none; 
-}
-
-/* === CONTACT FORM FIELD FOCUS STATE === */
-.contactus-form-box input:focus,
-.contactus-form-box select:focus,
-.contactus-form-box textarea:focus {
-  padding: 10px;
-  border: 3px solid #071f35; 
-  border-radius: 6px !important;
-  outline: none;
-  box-sizing: border-box;
+  margin-bottom: 15px;
+  border: 2px solid #98b1c8;
+  border-radius: 6px;
 }
 
 .contactus-form-box textarea {
@@ -732,12 +726,12 @@ footer svg {
 
 .submit-btn {
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   border-radius: 5px;
   background-color: #f7fafe;
   color: #000000;
-  border: 3px solid #446d92;
+  border: 2px solid #446d92;
   display: block;
   margin: 10px auto 0 auto;
   cursor: pointer;
@@ -745,5 +739,5 @@ footer svg {
 
 .submit-btn:hover {
   background-color: #98b1c8;
-  border: 3px solid #071f35;
+  border: 2px solid #071f35;
 }
