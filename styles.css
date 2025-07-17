@@ -1,3 +1,20 @@
+/* ==============================
+   animation
+============================== */
+#logo-animation-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+#gmg-logo {
+  width: 90%;
+  max-width: 1000px;
+  height: auto;
+  overflow: visible;
+}
 
 /* ==============================
    GLOBAL STYLES
