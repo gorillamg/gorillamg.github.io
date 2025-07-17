@@ -256,34 +256,27 @@
 
     paths.forEach((path, index) => {
       const length = path.getTotalLength();
-      path.style.stroke = "#071f35";
-      path.style.fill = "none";
-      path.style.strokeWidth = "16";
+
+      path.style.stroke = '#1B0B26';
+      path.style.fill = 'none';
+      path.style.strokeWidth = '2';
       path.style.strokeDasharray = length;
       path.style.strokeDashoffset = length;
-      path.style.animation = `drawLetter 3s ease forwards, fillLetter 1s ease forwards`;
-      path.style.animationDelay = `${index * 0.4}s, ${index * 0.4 + 3}s`;
+      path.style.animation = `drawPath 2s ease forwards`;
+      path.style.animationDelay = `${index * 0.3}s`;
     });
-
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes drawLetter {
-        to {
-          stroke-dashoffset: 0;
-        }
-      }
-
-      @keyframes fillLetter {
-        0% {
-          fill: transparent;
-        }
-        100% {
-          fill: #071f35;
-        }
-      }
-    `;
-    document.head.appendChild(style);
   });
+
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes drawPath {
+      to {
+        stroke-dashoffset: 0;
+        fill: #1B0B26;
+      }
+    }
+  `;
+  document.head.appendChild(style);
 </script>
   
 </body>
