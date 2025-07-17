@@ -351,8 +351,8 @@ footer svg {
   background-color: #FFFFFF;
   padding: 30px;
   border-radius: 12px;
-  max-width: 400px;
-  flex: 1 1 400px;
+  max-width: 600px;
+  flex: 1 1 500px;
   box-sizing: border-box;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
