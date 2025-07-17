@@ -1,21 +1,3 @@
-/* ==============================
-   animation
-============================== */
-#gmg-animation-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 40px;    /* 40px below floating box */
-  padding-bottom: 40px; /* 40px above footer */
-}
-
-#gmg-logo {
-  width: 90%;
-  max-width: 800px;
-  height: auto;
-  display: block;
-  transform: scaleY(-1); /* Flip upright if needed */
-}
 
 /* ==============================
    GLOBAL STYLES
