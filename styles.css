@@ -675,6 +675,9 @@ footer svg {
   max-width: 600px !important;
   box-sizing: border-box;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contactus-form-box h2 {
