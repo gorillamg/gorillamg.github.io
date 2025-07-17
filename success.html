@@ -257,23 +257,26 @@
     paths.forEach((path, index) => {
       const length = path.getTotalLength();
 
-      path.style.stroke = '#1B0B26';
-      path.style.fill = 'none';
+      path.style.stroke = '#1B0B26';         // Sharpie color
+      path.style.fill = '#1B0B26';           // Fill as it writes
       path.style.strokeWidth = '2';
       path.style.strokeDasharray = length;
       path.style.strokeDashoffset = length;
-      path.style.animation = `drawPath 2s ease forwards`;
-      path.style.animationDelay = `${index * 0.3}s`;
+      path.style.animation = `write 1s ease-out forwards`;
+      path.style.animationDelay = `${index * 0.25}s`;
     });
   });
 
   const style = document.createElement('style');
   style.textContent = `
-    @keyframes drawPath {
+    @keyframes write {
       to {
         stroke-dashoffset: 0;
-        fill: #1B0B26;
       }
+    }
+
+    #gmg-logo path {
+      fill-opacity: 1;
     }
   `;
   document.head.appendChild(style);
