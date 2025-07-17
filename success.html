@@ -84,8 +84,8 @@
   </section>
 
     <!-- Animated Inline SVG Logo -->
-<div id="logo-animation-wrapper">
-  <svg id="gmg-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 2000">
+<div id="logo-animation-wrapper" style="margin-top: 40px; display: flex; justify-content: center;">
+  <svg id="gmg-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 2000" style="width: 90%; max-width: 800px; height: auto;">
     
 <path d="M2000 7536 c-8 -7 -107 -76 -220 -151 -255 -172 -319 -220 -446 -337
 -204 -187 -382 -446 -428 -620 -12 -45 -13 -82 -6 -181 11 -150 22 -200 65
@@ -252,30 +252,39 @@
 
   <script>
   window.addEventListener('DOMContentLoaded', () => {
-    const svg = document.getElementById('gmg-logo');
-    const paths = svg.querySelectorAll('path');
+    const paths = document.querySelectorAll('#gmg-logo path');
 
     paths.forEach((path, index) => {
       const length = path.getTotalLength();
-      path.style.stroke = "#000";         // black stroke
-      path.style.fill = "none";           // no fill
-      path.style.strokeWidth = "4";       // thick enough stroke
+
+      path.style.stroke = '#1B0B26';
+      path.style.fill = 'none';
+      path.style.strokeWidth = '20';
       path.style.strokeDasharray = length;
       path.style.strokeDashoffset = length;
-      path.style.animation = `drawPath 5s ease forwards`;
-      path.style.animationDelay = `${index * 0.05}s`;
+      path.style.animation = `drawLetter 0.6s ease-out forwards, fillLetter 0.6s ease-out forwards`;
+      path.style.animationDelay = `${index * 0.3}s, ${index * 0.3 + 0.3}s`;
     });
-  });
 
-  const style = document.createElement('style');
-  style.innerHTML = `
-    @keyframes drawPath {
-      to {
-        stroke-dashoffset: 0;
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes drawLetter {
+        to {
+          stroke-dashoffset: 0;
+        }
       }
-    }
-  `;
-  document.head.appendChild(style);
+
+      @keyframes fillLetter {
+        from {
+          fill: transparent;
+        }
+        to {
+          fill: #1B0B26;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  });
 </script>
   
 </body>
