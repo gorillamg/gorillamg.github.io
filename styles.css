@@ -52,7 +52,7 @@ h2 {
   box-sizing: border-box;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   .responsive-section {
     flex-direction: column;
   }
@@ -72,7 +72,7 @@ h2 {
   box-sizing: border-box;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   .floating-box {
     max-width: 100%;
   }
@@ -190,7 +190,7 @@ nav#navbar {
   font-weight: bold;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1100px) {
   #desktop-nav-left, .linkedin-icon {
     display: none;
   }
@@ -351,8 +351,8 @@ footer svg {
   background-color: #FFFFFF;
   padding: 30px;
   border-radius: 12px;
-  max-width: 500px;
-  flex: 1 1 500px;
+  max-width: 400px;
+  flex: 1 1 400px;
   box-sizing: border-box;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -587,15 +587,14 @@ footer svg {
   margin: 10% auto;
   padding: 20px;
   border: 3px solid #071f35;
-  min-width: 50%;
-  max-width: 75%;
+  max-width: 70%;
   border-radius: 20px;
   text-align: center;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   .modal-content {
-    max-width: 75%; 
+    max-width: 70%; 
   }
 }
 
@@ -673,8 +672,7 @@ footer svg {
   padding: 30px 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 500px;
+  max-width: 600px !important;
   box-sizing: border-box;
   margin: 0;
 }
@@ -704,12 +702,12 @@ footer svg {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
-  border: 3px solid #446d92; /* 🔵 Default border color */
+  border: 3px solid #446d92; 
   border-radius: 6px !important;
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 12px;
-  outline: none; /* Optional: to prevent double border glitch */
+  outline: none; 
 }
 
 /* === CONTACT FORM FIELD FOCUS STATE === */
@@ -717,7 +715,7 @@ footer svg {
 .contactus-form-box select:focus,
 .contactus-form-box textarea:focus {
   padding: 10px;
-  border: 3px solid #071f35; /* ⚫ Focus border color */
+  border: 3px solid #071f35; 
   border-radius: 6px !important;
   outline: none;
   box-sizing: border-box;
