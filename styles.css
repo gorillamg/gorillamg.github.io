@@ -63,7 +63,7 @@ input, textarea, select {
   box-sizing: border-box;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .responsive-section {
     flex-direction: column;
   }
@@ -83,7 +83,7 @@ input, textarea, select {
   box-sizing: border-box;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .floating-box {
     max-width: 100%;
   }
