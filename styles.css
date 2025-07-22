@@ -70,10 +70,10 @@ input, textarea, select {
     justify-content: center;
     box-sizing: border-box;
     padding: 160px 20px 40px 20px;
+    flex-direction: column;
   }
   .responsive-half {
     max-width: 80%;
-    flex-direction: column;
   }
 }
 
@@ -84,10 +84,10 @@ input, textarea, select {
     justify-content: center;
     box-sizing: border-box;
     padding: 160px 20px 40px 20px;
+    flex-direction: column;
   }
   .responsive-half {
     max-width: 90%;
-    flex-direction: column;
   }
 }
 
@@ -98,10 +98,10 @@ input, textarea, select {
     justify-content: center;
     box-sizing: border-box;
     padding: 160px 20px 40px 20px;
+    flex-direction: column;
   }
   .responsive-half {
     max-width: 100%;
-    flex-direction: column;
   }
 }
 
