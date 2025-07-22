@@ -55,7 +55,7 @@ input, textarea, select {
 }
 
 .responsive-half {
-  flex: 0 0 50%;
+  flex: 1 1 500px;
   max-width: 50%;
   display: flex;
   justify-content: center;
@@ -111,7 +111,7 @@ input, textarea, select {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  max-width: 600px;
+  max-width: 500px;
   text-align: center;
   box-sizing: border-box;
 }
@@ -683,7 +683,7 @@ footer svg {
 }
 
 .cares-first-half {
-  flex: 0 0 50%;
+  flex: 1 1 500px;
   max-width: 50%;
   display: flex;
   justify-content: center;
