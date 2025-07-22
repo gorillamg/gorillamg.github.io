@@ -810,8 +810,9 @@ footer svg {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 20px !important;
   background-color: #24496b;
+  padding: 0 20px 40px 20px;
 }
 
 #gorillacares-third-left,
