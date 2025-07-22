@@ -73,6 +73,7 @@ input, textarea, select {
   }
   .responsive-half {
     max-width: 80%;
+    flex-direction: column;
   }
 }
 
@@ -86,6 +87,7 @@ input, textarea, select {
   }
   .responsive-half {
     max-width: 90%;
+    flex-direction: column;
   }
 }
 
@@ -99,6 +101,7 @@ input, textarea, select {
   }
   .responsive-half {
     max-width: 100%;
+    flex-direction: column;
   }
 }
 
