@@ -63,7 +63,7 @@ input, textarea, select {
   box-sizing: border-box;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1260px) {
   .responsive-section {
     display: flex;
     flex-wrap: wrap;
@@ -72,11 +72,11 @@ input, textarea, select {
     padding: 160px 20px 40px 20px;
   }
   .responsive-half {
-    max-width: 70%;
+    max-width: 80%;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1010px) {
   .responsive-section {
     display: flex;
     flex-wrap: wrap;
@@ -89,7 +89,7 @@ input, textarea, select {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 760px) {
   .responsive-section {
     display: flex;
     flex-wrap: wrap;
@@ -113,19 +113,19 @@ input, textarea, select {
   box-sizing: border-box;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1260px) {
   .floating-box {
-    max-width: 70%;
+    max-width: 80%;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1010px) {
   .floating-box {
     max-width: 90%;
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 760px) {
   .floating-box {
     max-width: 100%;
   }
@@ -243,7 +243,7 @@ nav#navbar {
   font-weight: bold;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1260px) {
   #desktop-nav-left, .linkedin-icon {
     display: none;
   }
@@ -645,7 +645,7 @@ footer svg {
   margin: 10% auto;
   padding: 20px;
   border: 2px solid #071f35;
-  max-width: 65%;
+  max-width: 60%;
   border-radius: 20px;
   text-align: center;
 }
