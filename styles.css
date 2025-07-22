@@ -783,12 +783,12 @@ footer svg {
 ============================== */
 
 #gorillacares-second {
-  background-color: #24496b;
+  background-color: #98b1c8;
   text-align: center;
 }
 
 .gorillacares-box {
-  background-color: #24496b;
+  background-color: #98b1c8;
   padding: 10px;
   border-radius: 12px;
   max-width: 600px;
@@ -796,32 +796,14 @@ footer svg {
 }
 
 #gorillacares-second h1 {
-  color: #FFFFFF;
+  color: #000000;
 }
 
 #donation-amount {
   font-size: 40px;
   font-weight: bold;
-  color: #FFFFFF;
-  margin-top: 20px;
-}
-
-#gorillacares-third {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px !important;
-  background-color: #24496b;
-  padding: 0 20px 40px 20px;
-}
-
-#gorillacares-third h1 {
   color: #071f35;
-  margin-bottom: 20px;
-}
-
-#gorillacares-third h2 {
-  color: #000000;
+  margin-top: 20px;
 }
 
 /* ==============================
