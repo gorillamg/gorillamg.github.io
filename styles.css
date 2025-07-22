@@ -63,7 +63,7 @@ input, textarea, select {
   box-sizing: border-box;
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1265px) {
   .responsive-section {
     display: flex;
     flex-wrap: wrap;
@@ -76,7 +76,7 @@ input, textarea, select {
   }
 }
 
-@media (max-width: 1010px) {
+@media (max-width: 1015px) {
   .responsive-section {
     display: flex;
     flex-wrap: wrap;
@@ -89,7 +89,7 @@ input, textarea, select {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 765px) {
   .responsive-section {
     display: flex;
     flex-wrap: wrap;
@@ -113,19 +113,19 @@ input, textarea, select {
   box-sizing: border-box;
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1265px) {
   .floating-box {
     max-width: 80%;
   }
 }
 
-@media (max-width: 1010px) {
+@media (max-width: 1015px) {
   .floating-box {
     max-width: 90%;
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 765px) {
   .floating-box {
     max-width: 100%;
   }
