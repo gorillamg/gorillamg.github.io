@@ -684,7 +684,7 @@ footer svg {
 }
 
 .cares-first-half {
-  flex: 1 1 600px;
+  flex: 0 0 50%;
   max-width: 50%;
   display: flex;
   justify-content: center;
