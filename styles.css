@@ -56,23 +56,22 @@ input, textarea, select {
 
 .responsive-half {
   flex: 1 1 600px;
-  max-width: 70%;
+  max-width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  margin: 20px;
 }
 
 @media (max-width: 1300px) {
   .responsive-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 160px 20px 40px 20px;
+    flex-direction: column;
+    padding: 60px 20px 40px 20px;
   }
   .responsive-half {
     max-width: 80%;
+    margin: 10px 0;
   }
 }
 
@@ -111,6 +110,7 @@ input, textarea, select {
   max-width: 600px;
   text-align: center;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 @media (max-width: 1300px) {
