@@ -813,7 +813,7 @@ footer svg {
   padding: 30px 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  max-width: 555px;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
