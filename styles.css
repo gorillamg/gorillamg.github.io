@@ -673,7 +673,113 @@ footer svg {
 }
 
 /* ==============================
-   GORILLA CARES
+   responsive layout in gorilla cares
+============================== */
+.cares-first-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 160px 20px 40px 20px;
+}
+
+.cares-first-half {
+  flex: 1 1 600px;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1300px) {
+  .cares-first-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 160px 20px 40px 20px;
+  }
+  .cares-first-half {
+    max-width: 65%;
+    flex: 0 0 65%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cares-first-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 160px 20px 40px 20px;
+  }
+  .cares-first-half {
+    max-width: 85%;
+    flex: 0 0 85%;
+  }
+}
+
+@media (max-width: 800px) {
+  .cares-first-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 160px 20px 40px 20px;
+  }
+  .cares-first-half {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+.cares-first-box {
+  position: relative;
+  background: #FFFFFF;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@media (max-width: 1300px) {
+  .cares-first-box {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cares-first-box {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .cares-first-box {
+    max-width: 100%;
+  }
+}
+
+.cares-first-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.cares-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+/* ==============================
+   gorilla cares second and third sections
 ============================== */
 
 #gorillacares-second {
