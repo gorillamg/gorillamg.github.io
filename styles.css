@@ -73,6 +73,7 @@ input, textarea, select {
   }
   .responsive-half {
     max-width: 80%;
+    flex: 0 0 80%;
   }
 }
 
@@ -86,6 +87,7 @@ input, textarea, select {
   }
   .responsive-half {
     max-width: 90%;
+    flex: 0 0 90%;
   }
 }
 
@@ -99,6 +101,7 @@ input, textarea, select {
   }
   .responsive-half {
     max-width: 100%;
+    flex: 0 0 100%;
   }
 }
 
@@ -116,13 +119,13 @@ input, textarea, select {
 
 @media (max-width: 1300px) {
   .floating-box {
-    max-width: 80%;
+    max-width: 100%;
   }
 }
 
 @media (max-width: 1000px) {
   .floating-box {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 
