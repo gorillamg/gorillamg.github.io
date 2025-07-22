@@ -63,7 +63,7 @@ input, textarea, select {
   box-sizing: border-box;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .responsive-section {
     display: flex;
     flex-wrap: wrap;
@@ -72,7 +72,7 @@ input, textarea, select {
     padding: 160px 20px 40px 20px;
   }
   .responsive-half {
-    max-width: 80%;
+    max-width: 70%;
   }
 }
 
@@ -89,7 +89,7 @@ input, textarea, select {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 750px) {
   .responsive-section {
     display: flex;
     flex-wrap: wrap;
@@ -113,9 +113,9 @@ input, textarea, select {
   box-sizing: border-box;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .floating-box {
-    max-width: 80%;
+    max-width: 70%;
   }
 }
 
@@ -125,7 +125,7 @@ input, textarea, select {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 750px) {
   .floating-box {
     max-width: 100%;
   }
