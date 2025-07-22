@@ -63,7 +63,7 @@ input, textarea, select {
   box-sizing: border-box;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1300px) {
   .responsive-section {
     display: flex;
     flex-wrap: wrap;
@@ -76,7 +76,7 @@ input, textarea, select {
   }
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1000px) {
   .responsive-section {
     display: flex;
     flex-wrap: wrap;
@@ -89,7 +89,7 @@ input, textarea, select {
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 800px) {
   .responsive-section {
     display: flex;
     flex-wrap: wrap;
@@ -113,19 +113,19 @@ input, textarea, select {
   box-sizing: border-box;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1300px) {
   .floating-box {
     max-width: 80%;
   }
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1000px) {
   .floating-box {
     max-width: 90%;
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 800px) {
   .floating-box {
     max-width: 100%;
   }
@@ -243,7 +243,7 @@ nav#navbar {
   font-weight: bold;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1300px) {
   #desktop-nav-left, .linkedin-icon {
     display: none;
   }
