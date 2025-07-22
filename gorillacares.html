@@ -75,7 +75,7 @@
 </div>
 
 <!-- FIRST BODY SECTION: Responsive Image Box like Contact Us -->
-<section class="responsive-section">
+<section class="gorillacares-first-section">
   <div class="responsive-half">
     <div class="floating-box" style="background-color: #24496b;">
       <img src="assets/9.png" alt="Gorilla Cares Image" class="responsive-img">
@@ -144,6 +144,48 @@
     document.getElementById('menu-modal').classList.toggle('show');
   }
 </script>
+
+    <script>
+  function applyResponsiveInlineStyles() {
+    const section = document.querySelector(".gorillacares-first-section");
+    const halves = section.querySelectorAll(".responsive-half");
+    const width = window.innerWidth;
+
+    // Clear any previously set inline styles
+    section.removeAttribute("style");
+    halves.forEach(half => half.removeAttribute("style"));
+
+    // Common section styles for all breakpoints
+    section.style.display = "flex";
+    section.style.flexWrap = "wrap";
+    section.style.justifyContent = "center";
+    section.style.boxSizing = "border-box";
+    section.style.padding = "160px 20px 40px 20px";
+
+    // Breakpoint-specific half styles
+    if (width <= 800) {
+      halves.forEach(half => {
+        half.style.maxWidth = "100%";
+        half.style.flex = "0 0 100%";
+      });
+    } else if (width <= 1000) {
+      halves.forEach(half => {
+        half.style.maxWidth = "75%";
+        half.style.flex = "0 0 75%";
+      });
+    } else if (width <= 1300) {
+      halves.forEach(half => {
+        half.style.maxWidth = "50%";
+        half.style.flex = "0 0 50%";
+      });
+    }
+  }
+
+  // Run on load and on resize
+  window.addEventListener("load", applyResponsiveInlineStyles);
+  window.addEventListener("resize", applyResponsiveInlineStyles);
+</script>
+    
 </body>
 </html>
 
