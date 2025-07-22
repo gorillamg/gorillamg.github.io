@@ -815,12 +815,6 @@ footer svg {
   padding: 0 20px 40px 20px;
 }
 
-#gorillacares-third-left,
-#gorillacares-third-right {
-  flex: 1 1 600px;
-  max-width: 600px;
-}
-
 #gorillacares-third h1 {
   color: #071f35;
   margin-bottom: 20px;
