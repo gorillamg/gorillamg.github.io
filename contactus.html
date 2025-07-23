@@ -132,6 +132,13 @@
   <label for="message">Message</label>
   <textarea id="message" name="message" placeholder="Message" required></textarea>
 
+  <label for="schedule-interest">Would you like to schedule a meeting?</label>
+  <select id="schedule-interest" name="schedule-interest" required>
+    <option value="">-- Select an Option --</option>
+    <option value="Yes">Yes, I’d like to schedule</option>
+    <option value="No">No, not right now</option>
+  </select>
+
   <input type="hidden" name="from_name" id="from_name">
 
   <button type="submit" class="submit-btn">Submit</button>
