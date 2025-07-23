@@ -104,20 +104,20 @@
       <h2>Contact Form</h2>
 	  
       <form id="contact-form" onsubmit="sendEmail(event)">
-  <label>First Name</label>
-  <input type="text" name="first_name" placeholder="First Name" required>
+  <label for="first_name">First Name</label>
+  <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
 
-  <label>Last Name</label>
-  <input type="text" name="last_name" placeholder="Last Name" required>
+  <label for="last_name">Last Name</label>
+  <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
 
-  <label>Email</label>
-  <input type="email" name="email" placeholder="Your Email" required>
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-  <label>Phone Number</label>
-  <input type="text" name="phone_number" placeholder="Phone Number" required>
+  <label for="phone_number">Phone Number</label>
+  <input type="text" id="phone_number" name="phone_number" placeholder="Phone Number" required>
 
-  <label>Interest</label>
-  <select name="interest" required>
+  <label for="interest">Interest</label>
+  <select id="interest" name="interest" required>
     <option value="">-- Select an Option --</option>
     <option>Driving Traffic</option>
     <option>Boosting Conversions</option>
@@ -129,11 +129,11 @@
     <option>Other</option>
   </select>
 
-  <label>Message</label>
-  <textarea name="message" placeholder="Your Message" required></textarea>
+  <label for="message">Message</label>
+  <textarea id="message" name="message" placeholder="Message" required></textarea>
 
   <input type="hidden" name="from_name" id="from_name">
-  
+
   <button type="submit" class="submit-btn">Submit</button>
 </form>
 
