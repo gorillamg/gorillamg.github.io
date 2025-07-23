@@ -806,16 +806,21 @@ footer svg {
 }
 
 /* ==============================
-   CONTACT US FORM (Problem 7)
+   CONTACT US FORM (Updated Styling)
 ============================== */
+
 .contactus-form-box {
   background-color: #FFFFFF;
-  padding: 50px;
+  padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 600px;
+  width: 100%;
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contactus-form-box h2 {
@@ -832,37 +837,50 @@ footer svg {
   margin: 10px 0 5px;
   color: #000000;
   text-align: left;
+  font-family: inherit;
 }
 
+/* Form Inputs, Select, and Textarea */
 .contactus-form-box input,
 .contactus-form-box select,
 .contactus-form-box textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 15px;
   border: 2px solid #98b1c8;
-  border-radius: 6px;
-  max-width: 100%;
-  box-sizing: border-box; 
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  box-sizing: border-box;
 }
 
+/* Placeholder consistency across all fields */
+.contactus-form-box input::placeholder,
+.contactus-form-box textarea::placeholder {
+  font-family: inherit;
+  font-size: 16px;
+  color: #888;
+}
+
+/* Textarea specific styling */
 .contactus-form-box textarea {
   resize: none;
   overflow-y: auto;
-  height: 100px;
+  height: 120px;
 }
 
+/* Submit button */
 .submit-btn {
-  padding: 10px 20px;
+  padding: 14px 20px;
   font-size: 16px;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #f7fafe;
   color: #000000;
   border: 2px solid #446d92;
-  display: block;
-  margin: 10px auto 0 auto;
+  width: 100%;
   cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .submit-btn:hover {
