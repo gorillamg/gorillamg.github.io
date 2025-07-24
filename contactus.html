@@ -178,6 +178,10 @@
     const lastName = document.querySelector('input[name="last_name"]').value.trim();
     document.querySelector('input[name="from_name"]').value = `${firstName} ${lastName}`;
 
+    // ✅ Check scheduling interest and set hidden EmailJS flag
+    const scheduleInterest = document.querySelector('select[name="schedule-interest"]').value;
+    document.querySelector('input[name="schedule_link_show"]').value = scheduleInterest === "Yes" ? "true" : "";
+
     emailjs.sendForm(
       'service_vqvje8u',
       'template_8thlygx',
@@ -185,7 +189,6 @@
     ).then(
       function(response) {
         console.log('✅ SUCCESS!', response.status, response.text);
-        // ✅ IMMEDIATELY redirect, no alert
         window.location.href = "https://gorillamg.github.io/success.html";
       },
       function(error) {
@@ -193,9 +196,6 @@
         alert("❌ Something went wrong. Please try again at a later date.");
       }
     );
-
-    // ✅ Do NOT reset yet — let EmailJS capture values
-    // e.target.reset();  <-- REMOVE THIS LINE
   }
 </script>
 
