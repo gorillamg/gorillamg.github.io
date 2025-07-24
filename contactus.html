@@ -104,8 +104,6 @@
       <h2>Contact Form</h2>
 	  
       <form id="contact-form" onsubmit="sendEmail(event)">
-	
-	<input type="hidden" name="schedule_link_show" id="schedule_link_show">
 
         <label for="first_name">First Name</label>
         <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
@@ -172,9 +170,6 @@
 
   function sendEmail(e) {
     e.preventDefault();
-
-    const schedule = document.querySelector('select[name="schedule_interest"]').value;
-    document.getElementById("schedule_link_show").value = schedule === "Yes" ? "true" : "false";
 
     emailjs.sendForm(
       'service_vqvje8u',         
