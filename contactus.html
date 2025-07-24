@@ -137,8 +137,8 @@
   <label for="message">Message</label>
   <textarea id="message" name="message" placeholder="Message" required></textarea>
 
-  <label for="schedule-interest">Would you like to schedule a meeting?</label>
-  <select id="schedule-interest" name="schedule-interest" required>
+  <label for="schedule_interest">Would you like to schedule a meeting?</label>
+  <select id="schedule_interest" name="schedule_interest" required>
     <option value="">-- Select an Option --</option>
     <option value="Yes">Yes, I’d like to schedule</option>
     <option value="No">No, not right now</option>
@@ -186,7 +186,7 @@
     document.querySelector('input[name="first_name_hidden"]').value = firstName;
     document.querySelector('input[name="last_name_hidden"]').value = lastName;
 
-    const scheduleInterest = document.querySelector('select[name="schedule-interest"]').value;
+    const scheduleInterest = document.querySelector('select[name="schedule_interest"]').value;
     document.querySelector('input[name="schedule_link_show"]').value = scheduleInterest === "Yes" ? "true" : "";
 
     // ✅ Send the form
