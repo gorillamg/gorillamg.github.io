@@ -104,48 +104,43 @@
       <h2>Contact Form</h2>
 	  
       <form id="contact-form" onsubmit="sendEmail(event)">
-  <input type="hidden" name="first_name_hidden" id="first_name_hidden">
-  <input type="hidden" name="last_name_hidden" id="last_name_hidden">
-  <input type="hidden" name="schedule_link_show" id="schedule_link_show">
-  <input type="hidden" name="from_name" id="from_name">
-	      
-  <label for="first_name">First Name</label>
-  <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
 
-  <label for="last_name">Last Name</label>
-  <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
 
-  <label for="email">Email</label>
-  <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-  <label for="phone_number">Phone Number</label>
-  <input type="text" id="phone_number" name="phone_number" placeholder="Phone Number" required>
+        <label for="phone_number">Phone Number</label>
+        <input type="text" id="phone_number" name="phone_number" placeholder="Phone Number" required>
 
-  <label for="interest">Interest</label>
-  <select id="interest" name="interest" required>
-    <option value="">-- Select an Option --</option>
-    <option>Driving Traffic</option>
-    <option>Boosting Conversions</option>
-    <option>Gift with Purchase Programs</option>
-    <option>Loyalty Points Programs</option>
-    <option>eLearning Platforms</option>
-    <option>Travel Incentives</option>
-    <option>Customer Service Sales Training</option>
-    <option>Other</option>
-  </select>
+        <label for="interest">Interest</label>
+        <select id="interest" name="interest" required>
+          <option value="">-- Select an Option --</option>
+          <option>Driving Traffic</option>
+          <option>Boosting Conversions</option>
+          <option>Gift with Purchase Programs</option>
+          <option>Loyalty Points Programs</option>
+          <option>eLearning Platforms</option>
+          <option>Travel Incentives</option>
+          <option>Customer Service Sales Training</option>
+          <option>Other</option>
+        </select>
 
-  <label for="message">Message</label>
-  <textarea id="message" name="message" placeholder="Message" required></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Message" required></textarea>
 
-  <label for="schedule_interest">Would you like to schedule a meeting?</label>
-  <select id="schedule_interest" name="schedule_interest" required>
-    <option value="">-- Select an Option --</option>
-    <option value="Yes">Yes, I’d like to schedule</option>
-    <option value="No">No, not right now</option>
-  </select>
+        <label for="schedule_interest">Would you like to schedule a meeting?</label>
+        <select id="schedule_interest" name="schedule_interest" required>
+          <option value="">-- Select an Option --</option>
+          <option value="Yes">Yes, I’d like to schedule</option>
+          <option value="No">No, not right now</option>
+        </select>
 
-  <button type="submit" class="submit-btn">Submit</button>
-</form>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
 
     </div>
   </div>
@@ -166,50 +161,29 @@
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
+	
 <script>
   (function() {
-    emailjs.init("q-VOpgLu6FiVI0MLe"); // Your EmailJS public key
+    emailjs.init("q-VOpgLu6FiVI0MLe"); 
   })();
 
   function sendEmail(e) {
     e.preventDefault();
-    console.log("✅ sendEmail() triggered.");
 
-    // ✅ Get values from visible fields
-    const firstName = document.querySelector('input[name="first_name"]').value.trim();
-    const lastName = document.querySelector('input[name="last_name"]').value.trim();
-    const scheduleInterest = document.querySelector('select[name="schedule_interest"]').value;
-
-    // ✅ Set all hidden fields
-    document.querySelector('input[name="from_name"]').value = `${firstName} ${lastName}`;
-    document.querySelector('input[name="first_name_hidden"]').value = firstName;
-    document.querySelector('input[name="last_name_hidden"]').value = lastName;
-    document.querySelector('input[name="schedule_link_show"]').value = scheduleInterest === "Yes" ? "true" : "";
-
-    // ✅ Delay form send just long enough for fields to populate
-    setTimeout(() => {
-      console.log("📤 Submitting with hidden fields:");
-      console.log("first_name_hidden:", document.querySelector('input[name="first_name_hidden"]').value);
-      console.log("last_name_hidden:", document.querySelector('input[name="last_name_hidden"]').value);
-      console.log("from_name:", document.querySelector('input[name="from_name"]').value);
-      console.log("schedule_link_show:", document.querySelector('input[name="schedule_link_show"]').value);
-
-      emailjs.sendForm(
-        'service_vqvje8u',          // ✅ Your EmailJS Service ID
-        'template_8thlygx',         // ✅ Your Contact Us Template ID
-        '#contact-form'
-      ).then(
-        function(response) {
-          console.log('✅ SUCCESS!', response.status, response.text);
-          window.location.href = "https://gorillamg.github.io/success.html";
-        },
-        function(error) {
-          console.log('❌ FAILED...', error);
-          alert("❌ Something went wrong. Please try again at a later date.");
-        }
-      );
-    }, 50); // ⏱ Small delay ensures hidden fields are populated before send
+    emailjs.sendForm(
+      'service_vqvje8u',         
+      'template_8thlygx',        
+      '#contact-form'
+    ).then(
+      function(response) {
+        console.log('✅ SUCCESS!', response.status, response.text);
+        window.location.href = "https://gorillamg.github.io/success.html";
+      },
+      function(error) {
+        console.log('❌ FAILED...', error);
+        alert("❌ Something went wrong. Please try again at a later date.");
+      }
+    );
   }
 </script>
 
