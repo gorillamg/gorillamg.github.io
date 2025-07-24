@@ -177,14 +177,19 @@
     e.preventDefault();
     console.log("✅ sendEmail() triggered.");
 
+    // ✅ Grab form values
     const firstName = document.querySelector('input[name="first_name"]').value.trim();
     const lastName = document.querySelector('input[name="last_name"]').value.trim();
-    document.querySelector('input[name="from_name"]').value = `${firstName} ${lastName}`;
 
-    // ✅ Check scheduling interest and set hidden EmailJS flag
+    // ✅ Set hidden fields
+    document.querySelector('input[name="from_name"]').value = `${firstName} ${lastName}`;
+    document.querySelector('input[name="first_name_hidden"]').value = firstName;
+    document.querySelector('input[name="last_name_hidden"]').value = lastName;
+
     const scheduleInterest = document.querySelector('select[name="schedule-interest"]').value;
     document.querySelector('input[name="schedule_link_show"]').value = scheduleInterest === "Yes" ? "true" : "";
 
+    // ✅ Send the form
     emailjs.sendForm(
       'service_vqvje8u',
       'template_8thlygx',
