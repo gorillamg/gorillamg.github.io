@@ -1,3 +1,14 @@
+/* Fixes the height and centers spinner inside */
+.floating-box.carousel-box {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Needed for absolutely positioned spinner */
+  background-color: #24496b; /* You already use this */
+  overflow: hidden;
+}
+
 .image-container {
   position: relative;
   width: 100%;
