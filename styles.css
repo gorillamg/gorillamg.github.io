@@ -95,23 +95,6 @@ html.fonts-loaded {
   opacity: 1;
 }
 
-html.page-loaded {
-  visibility: visible;
-  opacity: 1;
-}
-
-html.page-loaded .responsive-img, 
-html.page-loaded .slick-carousel, 
-html.page-loaded .logo-svg {
-  visibility: visible;
-  opacity: 1;
-}
-
-html.page-loaded .responsive-img.loaded {
-  opacity: 1;
-  visibility: visible;
-}
-
 body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
