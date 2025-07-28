@@ -30,7 +30,7 @@
         showImage();
       } else {
         img.addEventListener('load', () => {
-          setTimeout(showImage, 600); 
+          setTimeout(showImage, 0); 
         });
       }
     });
@@ -330,7 +330,11 @@
     document.head.appendChild(style);
   });
 </script>
-  
+<script>
+  window.addEventListener('load', () => {
+    document.body.classList.add('page-loaded');
+  });
+</script>  
 </body>
 </html>
 
