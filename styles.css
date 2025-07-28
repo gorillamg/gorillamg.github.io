@@ -30,13 +30,9 @@
   object-fit: contain;
   border-radius: 12px;
   display: block;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.1s ease-in;
   z-index: 1;
-}
-
-.slick-carousel img.responsive-img.loaded {
-  opacity: 1;
 }
 
 .floating-box.carousel-box {
