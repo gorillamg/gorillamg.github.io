@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  	<!-- Preconnect to Google Fonts early to avoid delay -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  
+<script>
+  document.fonts.ready.then(function () {
+    document.documentElement.classList.add('fonts-loaded');
+  });
+</script>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.responsive-img');
+
+    images.forEach(img => {
+      const spinner = img.previousElementSibling;
+
+      const showImage = () => {
+        img.classList.add('loaded');
+        if (spinner) spinner.style.display = 'none';
+      };
+
+      // If image already cached, skip spinner
+      if (img.complete) {
+        showImage();
+      } else {
+        img.addEventListener('load', () => {
+          setTimeout(showImage, 650); 
+        });
+      }
+    });
+  });
+</script>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Success</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/png" href="assets/gorilla.png">
