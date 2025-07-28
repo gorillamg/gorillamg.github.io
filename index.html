@@ -185,11 +185,25 @@
     document.getElementById('menu-modal').classList.toggle('show');
   }
 </script>
-<script>
+
+  <script>
   window.addEventListener('load', () => {
-    document.body.classList.add('page-loaded');
+    document.documentElement.classList.add('page-loaded');
+
+    // Handle each image individually
+    const images = document.querySelectorAll('.responsive-img');
+    images.forEach(img => {
+      if (img.complete) {
+        img.classList.add('loaded');
+      } else {
+        img.addEventListener('load', () => {
+          img.classList.add('loaded');
+        });
+      }
+    });
   });
 </script>
+
 </body>
 </html>
 
