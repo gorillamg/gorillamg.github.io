@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="preload" as="image" href="assets/3.png">
-  <link rel="preload" as="image" href="assets/4.png">
-  <link rel="preload" as="image" href="assets/2.png">
+
+  <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const images = [
+      'assets/3.png',
+      'assets/4.png',
+      'assets/2.png'
+    ];
+
+    images.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+  });
+</script>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
