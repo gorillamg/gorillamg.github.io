@@ -3,16 +3,22 @@
 <head>
 
   <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const images = [
-      'assets/3.png',
-      'assets/4.png',
-      'assets/2.png'
-    ];
+  document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.responsive-img');
 
-    images.forEach(src => {
-      const img = new Image();
-      img.src = src;
+    images.forEach(img => {
+      const spinner = img.previousElementSibling;
+
+      const onImageLoad = () => {
+        img.classList.add('loaded');
+        if (spinner) spinner.style.display = 'none';
+      };
+
+      if (img.complete) {
+        onImageLoad();
+      } else {
+        img.addEventListener('load', onImageLoad);
+      }
     });
   });
 </script>
@@ -119,9 +125,16 @@
   <div class="floating-box" style="background-color: #24496b;">
     <!-- Slick carousel -->
     <div class="slick-carousel">
+
+      <div class="image-container">
+      <div class="spinner"></div>
+      
       <div><img src="assets/3.png" alt="Image 1" class="responsive-img"></div>
       <div><img src="assets/4.png" alt="Image 2" class="responsive-img"></div>
       <div><img src="assets/2.png" alt="Image 3" class="responsive-img"></div>
+
+      </div>
+        
     </div>
   </div>
 </div>
