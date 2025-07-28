@@ -7,37 +7,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   
-<script>
-  document.fonts.ready.then(function () {
-    document.documentElement.classList.add('fonts-loaded');
-  });
-</script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const images = document.querySelectorAll('.responsive-img');
-
-  images.forEach(img => {
-    const spinner = img.previousElementSibling;
-
-    const showImage = () => {
-      img.classList.add('loaded');
-      if (spinner) spinner.style.display = 'none';
-    };
-
-    if (img.complete) {
-      // Image already cached, show immediately
-      showImage();
-    } else {
-      img.addEventListener('load', () => {
-        setTimeout(showImage, 0);
-      });
-    }
-  });
-});
-</script>
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
