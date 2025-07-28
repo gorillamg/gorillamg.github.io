@@ -10,25 +10,18 @@
       const spinner = img.previousElementSibling;
 
       const onImageLoad = () => {
-        // Stay visible for at least 1 full second
-        setTimeout(() => {
-          img.classList.add('loaded');
-          if (spinner) spinner.style.display = 'none';
-        }, 1000);
+        img.classList.add('loaded');
+        if (spinner) spinner.style.display = 'none';
       };
 
       if (img.complete) {
-        // Already loaded (cached) — no need for spinner
-        if (spinner) spinner.style.display = 'none';
-        img.classList.add('loaded');
+        onImageLoad();
       } else {
-        // Not loaded yet — wait and delay
-        if (spinner) spinner.style.display = 'block';
         img.addEventListener('load', onImageLoad);
       }
     });
   });
-  </script>
+</script>
   
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
