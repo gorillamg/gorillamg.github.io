@@ -96,6 +96,11 @@ html.fonts-loaded {
   opacity: 1;
 }
 
+html.page-loaded {
+  visibility: visible;
+  opacity: 1;
+}
+
 body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
