@@ -12,6 +12,7 @@
 .page-loaded .logo-svg {
   visibility: visible;
   opacity: 1;
+  transition: opacity 0.1s ease-in;
 }
 
 .slick-carousel .image-container {
