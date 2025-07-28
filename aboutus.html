@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.responsive-img');
+
+    images.forEach(img => {
+      const spinner = img.previousElementSibling;
+
+      const onImageLoad = () => {
+        img.classList.add('loaded');
+        if (spinner) spinner.style.display = 'none';
+      };
+
+      if (img.complete) {
+        onImageLoad();
+      } else {
+        img.addEventListener('load', onImageLoad);
+      }
+    });
+  });
+  </script>
 	
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
