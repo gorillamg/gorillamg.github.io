@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
       showImage();
     } else {
       img.addEventListener('load', () => {
-        setTimeout(showImage, 600);
+        setTimeout(showImage, 0);
       });
     }
   });
@@ -213,7 +213,11 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('menu-modal').classList.toggle('show');
   }
 </script>
-
+<script>
+  window.addEventListener('load', () => {
+    document.body.classList.add('page-loaded');
+  });
+</script>
 </body>
 </html>
 
