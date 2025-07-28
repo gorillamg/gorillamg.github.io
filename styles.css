@@ -12,7 +12,6 @@
 .page-loaded .logo-svg {
   visibility: visible;
   opacity: 1;
-  transition: opacity 0.1s ease-in;
 }
 
 .slick-carousel .image-container {
@@ -124,7 +123,6 @@ html {
 html.fonts-loaded {
   visibility: visible;
   opacity: 1;
-  transition: opacity 0.2s ease-in;
 }
 
 body {
