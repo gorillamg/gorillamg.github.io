@@ -10,7 +10,7 @@
   border-top: 4px solid #446d92;
   border-radius: 50%;
   animation: spin 1s linear infinite;
-  margin: 0 auto 10px auto;
+  margin: auto;
 }
 
 .floating-box img {
@@ -35,9 +35,7 @@
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
 
 /* ==============================
