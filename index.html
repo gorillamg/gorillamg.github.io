@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
       // Image already cached, show immediately
       showImage();
     } else {
-      // Wait for image to load, then hold spinner for 1 second
       img.addEventListener('load', () => {
         setTimeout(showImage, 650);
       });
