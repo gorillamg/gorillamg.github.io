@@ -583,6 +583,14 @@ footer svg {
 .slick-carousel {
   position: relative;
   border-radius: 12px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slick-initialized {
+  visibility: visible;
+  opacity: 1;
 }
 
 .slick-list {
