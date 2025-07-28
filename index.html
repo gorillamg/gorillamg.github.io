@@ -2,22 +2,26 @@
 <html lang="en">
 <head>
 
- <script>
+<script>
   document.addEventListener('DOMContentLoaded', function () {
     const images = document.querySelectorAll('.responsive-img');
 
     images.forEach(img => {
       const spinner = img.previousElementSibling;
 
-      const onImageLoad = () => {
+      const showImage = () => {
         img.classList.add('loaded');
         if (spinner) spinner.style.display = 'none';
       };
 
+      // If image already cached, skip spinner
       if (img.complete) {
-        onImageLoad();
+        showImage();
       } else {
-        img.addEventListener('load', onImageLoad);
+        // Hold spinner for 1 second after image is fully loaded
+        img.addEventListener('load', () => {
+          setTimeout(showImage, 1000); // hold spinner 1s even after load
+        });
       }
     });
   });
