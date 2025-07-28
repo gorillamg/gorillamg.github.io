@@ -40,6 +40,19 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- This script MUST come after jQuery and Slick -->
+  <script>
+    $(window).on('load', function () {
+      $('.slick-carousel').slick({
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        dots: true,
+        pauseOnHover: false,
+      });
+    });
+  </script>
   
 </head>
 
