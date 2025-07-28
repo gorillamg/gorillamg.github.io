@@ -3,16 +3,22 @@
 <head>
 
   <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const images = [
-      'assets/9.png',
-      'assets/team.png',
-      'assets/golf.png'
-    ];
+  document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.responsive-img');
 
-    images.forEach(src => {
-      const img = new Image();
-      img.src = src;
+    images.forEach(img => {
+      const spinner = img.previousElementSibling;
+
+      const onImageLoad = () => {
+        img.classList.add('loaded');
+        if (spinner) spinner.style.display = 'none';
+      };
+
+      if (img.complete) {
+        onImageLoad();
+      } else {
+        img.addEventListener('load', onImageLoad);
+      }
     });
   });
   </script>
