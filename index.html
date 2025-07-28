@@ -3,28 +3,28 @@
 <head>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const images = document.querySelectorAll('.responsive-img');
+document.addEventListener('DOMContentLoaded', function () {
+  const images = document.querySelectorAll('.responsive-img');
 
-    images.forEach(img => {
-      const spinner = img.previousElementSibling;
+  images.forEach(img => {
+    const spinner = img.previousElementSibling;
 
-      const showImage = () => {
-        img.classList.add('loaded');
-        if (spinner) spinner.style.display = 'none';
-      };
+    const showImage = () => {
+      img.classList.add('loaded');
+      if (spinner) spinner.style.display = 'none';
+    };
 
-      // If image already cached, skip spinner
-      if (img.complete) {
-        showImage();
-      } else {
-        // Hold spinner for 1 second after image is fully loaded
-        img.addEventListener('load', () => {
-          setTimeout(showImage, 1000); // hold spinner 1s even after load
-        });
-      }
-    });
+    if (img.complete) {
+      // Image already cached, show immediately
+      showImage();
+    } else {
+      // Wait for image to load, then hold spinner for 1 second
+      img.addEventListener('load', () => {
+        setTimeout(showImage, 1000);
+      });
+    }
   });
+});
 </script>
   
   <meta charset="UTF-8" />
