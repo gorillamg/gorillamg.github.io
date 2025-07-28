@@ -12,31 +12,6 @@
     document.documentElement.classList.add('fonts-loaded');
   });
 </script>
-
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const images = document.querySelectorAll('.responsive-img');
-
-    images.forEach(img => {
-      const spinner = img.previousElementSibling;
-
-      const showImage = () => {
-        img.classList.add('loaded');
-        if (spinner) spinner.style.display = 'none';
-      };
-
-      // If image already cached, skip spinner
-      if (img.complete) {
-        showImage();
-      } else {
-        // Hold spinner for 1 second after image is fully loaded
-        img.addEventListener('load', () => {
-          setTimeout(showImage, 0); 
-        });
-      }
-    });
-  });
-</script>
 	
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
