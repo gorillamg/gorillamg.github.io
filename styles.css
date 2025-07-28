@@ -73,6 +73,10 @@
   z-index: 1;
 }
 
+/* When loaded */
+.responsive-img.loaded {
+  opacity: 1;
+}
 /* ==============================
    GLOBAL STYLES
 ============================== */
