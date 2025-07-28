@@ -29,9 +29,8 @@
       if (img.complete) {
         showImage();
       } else {
-        // Hold spinner for 1 second after image is fully loaded
         img.addEventListener('load', () => {
-          setTimeout(showImage, 1000); // hold spinner 1s even after load
+          setTimeout(showImage, 650); 
         });
       }
     });
