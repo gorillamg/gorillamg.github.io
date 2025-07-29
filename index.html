@@ -162,24 +162,24 @@
 
 <script>
   $(window).on('load', function() {
-    $('.slick-carousel').on('init', function() {
-      document.body.classList.add('carousel-ready');
-    });
-
-    $('.slick-carousel').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      autoplay: true,
-      autoplaySpeed: 5000,
-      pauseOnHover: false,
-      pauseOnFocus: false,
-      pauseOnDotsHover: false,
-      prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
-      nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
-    });
+  $('.slick-carousel').on('init', function() {
+    document.body.classList.add('carousel-ready');
   });
+
+  $('.slick-carousel').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    pauseOnDotsHover: false,
+    prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+    nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
+  });
+});
 </script>
 
 <script>
