@@ -155,11 +155,17 @@
       document.getElementById('menu-modal').classList.toggle('show');
     }
   </script>
+	
 <script>
   window.addEventListener('load', () => {
-    document.body.classList.add('page-loaded');
+    document.documentElement.classList.add('page-loaded');
+  });
+
+  document.fonts.ready.then(() => {
+    document.documentElement.classList.add('fonts-loaded');
   });
 </script>
+
 </body>
 </html>
 
