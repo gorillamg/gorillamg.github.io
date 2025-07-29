@@ -162,8 +162,7 @@
 
 <script>
   $(window).on('load', function() {
-    $('.slick-carousel').on('init', function(event, slick) {
-      // Add class to trigger fade-in animation once carousel is initialized
+    $('.slick-carousel').on('init', function() {
       document.body.classList.add('carousel-ready');
     });
 
