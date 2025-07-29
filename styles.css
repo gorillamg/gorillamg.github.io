@@ -1,20 +1,30 @@
-/* Hide initially */
+/* ---------------------- */
+/* GLOBAL FADE-IN CONTROL */
+/* ---------------------- */
+
+.carousel-box,
+.carousel-container,
 .responsive-img,
 .slick-carousel,
 .logo-svg {
-  visibility: hidden;
   opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-/* Fade in smoothly once fully loaded */
-.page-loaded .responsive-img,
-.page-loaded .slick-carousel,
-.page-loaded .logo-svg {
-  visibility: visible;
+/* Fade in everything once carousel is fully ready */
+.carousel-ready .carousel-box,
+.carousel-ready .carousel-container,
+.carousel-ready .responsive-img,
+.carousel-ready .slick-carousel,
+.carousel-ready .logo-svg {
   opacity: 1;
 }
 
-.slick-carousel .image-container {
+/* ---------------------- */
+/* SLICK CAROUSEL STRUCTURE */
+/* ---------------------- */
+
+.slick-carousel {
   width: 100%;
   height: 100%;
   display: flex;
@@ -22,17 +32,17 @@
   justify-content: center;
   overflow: hidden;
   position: relative;
+  border-radius: 12px;
 }
 
-.slick-carousel img.responsive-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 12px;
-  display: block;
-  opacity: 1;
-  z-index: 1;
+/* Optional: Remove any default Slick visibility jumps */
+.slick-initialized {
+  visibility: visible;
 }
+
+/* ---------------------- */
+/* FLOATING CAROUSEL BOX */
+/* ---------------------- */
 
 .floating-box.carousel-box {
   max-height: 500px;
@@ -46,12 +56,9 @@
   border-radius: 12px;
 }
 
-.carousel-box .responsive-img {
-  object-fit: contain; 
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
+/* ---------------------- */
+/* IMAGE CONTAINER + IMG  */
+/* ---------------------- */
 
 .image-container {
   position: relative;
@@ -64,18 +71,16 @@
 }
 
 .responsive-img {
+  width: 100%;
+  height: 100%;
   max-width: 100%;
   max-height: 100%;
+  object-fit: contain;
   border-radius: 12px;
   display: block;
-  opacity: 0;
   z-index: 1;
 }
 
-/* When loaded */
-.responsive-img.loaded {
-  opacity: 1;
-}
 /* ==============================
    GLOBAL STYLES
 ============================== */
@@ -624,20 +629,6 @@ footer svg {
 /* ==============================
    SLICK CAROUSEL
 ============================== */
-
-.slick-carousel {
-  position: relative;
-  border-radius: 12px;
-  visibility: hidden;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.slick-initialized {
-  visibility: visible;
-  opacity: 1;
-}
 
 .slick-list {
   overflow: hidden;
