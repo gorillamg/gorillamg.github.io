@@ -13,7 +13,7 @@
 
 .carousel-ready .carousel-box,
 .carousel-ready .carousel-container,
-.carousel-ready .responsive-img,
+.carousel-ready .carousel-box .responsive-img,
 .carousel-ready .slick-carousel,
 .carousel-ready .logo-svg {
   opacity: 1;
