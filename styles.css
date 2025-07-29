@@ -1,7 +1,8 @@
-/* ---------------------- */
-/* FADE-IN ON CAROUSEL READY */
-/* ---------------------- */
+/* ---------------------------- */
+/* FADE-IN ON CAROUSEL READY   */
+/* ---------------------------- */
 
+/* Hide all critical visuals on initial load */
 .carousel-box,
 .carousel-container,
 .responsive-img,
@@ -11,7 +12,7 @@
   transition: opacity 0.5s ease;
 }
 
-/* Once everything is ready, fade it all in */
+/* Show everything smoothly once carousel is ready */
 .carousel-ready .carousel-box,
 .carousel-ready .carousel-container,
 .carousel-ready .responsive-img,
@@ -20,9 +21,9 @@
   opacity: 1;
 }
 
-/* ---------------------- */
-/* SLICK CAROUSEL STYLES */
-/* ---------------------- */
+/* ------------------------------------ */
+/* SLICK CAROUSEL STRUCTURE & OVERRIDES */
+/* ------------------------------------ */
 
 .slick-carousel {
   width: 100%;
@@ -34,14 +35,14 @@
   position: relative;
 }
 
-/* Ensure Slick-initialized state doesn't conflict */
+/* Prevent brief visibility flash from Slick before init */
 .slick-initialized {
   visibility: visible;
 }
 
-/* ---------------------- */
-/* FLOATING CAROUSEL BOX */
-/* ---------------------- */
+/* ---------------------------- */
+/* FLOATING CAROUSEL BOX STYLE  */
+/* ---------------------------- */
 
 .floating-box.carousel-box {
   max-height: 500px;
@@ -55,9 +56,9 @@
   border-radius: 12px;
 }
 
-/* ---------------------- */
-/* IMAGE CONTAINER & IMG */
-/* ---------------------- */
+/* ---------------------------- */
+/* IMAGE CONTAINER + IMAGE      */
+/* ---------------------------- */
 
 .image-container {
   position: relative;
