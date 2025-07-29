@@ -642,20 +642,6 @@ footer svg {
   display: block;
 }
 
-.slick-prev::before,
-.slick-next::before {
-  font-family: 'slick';
-  font-size: 36px;
-  line-height: 1;
-  opacity: 0.75;
-  color: #24496b;
-  content: '←'; /* Left arrow */
-}
-
-.slick-next::before {
-  content: '→'; /* Right arrow */
-}
-
 .slick-prev,
 .slick-next {
   position: absolute;
