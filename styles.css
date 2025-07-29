@@ -661,6 +661,17 @@ footer svg {
   cursor: pointer;
   z-index: 1000;
   text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+
+/* Show arrows when carousel is ready */
+.carousel-ready .slick-prev,
+.carousel-ready .slick-next {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .slick-prev:hover,
