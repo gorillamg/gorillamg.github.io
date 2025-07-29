@@ -1,5 +1,5 @@
 /* ---------------------- */
-/* GLOBAL FADE-IN CONTROL */
+/* FADE-IN ON CAROUSEL READY */
 /* ---------------------- */
 
 .carousel-box,
@@ -11,7 +11,7 @@
   transition: opacity 0.5s ease;
 }
 
-/* Fade in everything once carousel is fully ready */
+/* Once everything is ready, fade it all in */
 .carousel-ready .carousel-box,
 .carousel-ready .carousel-container,
 .carousel-ready .responsive-img,
@@ -21,7 +21,7 @@
 }
 
 /* ---------------------- */
-/* SLICK CAROUSEL STRUCTURE */
+/* SLICK CAROUSEL STYLES */
 /* ---------------------- */
 
 .slick-carousel {
@@ -32,10 +32,9 @@
   justify-content: center;
   overflow: hidden;
   position: relative;
-  border-radius: 12px;
 }
 
-/* Optional: Remove any default Slick visibility jumps */
+/* Ensure Slick-initialized state doesn't conflict */
 .slick-initialized {
   visibility: visible;
 }
@@ -57,7 +56,7 @@
 }
 
 /* ---------------------- */
-/* IMAGE CONTAINER + IMG  */
+/* IMAGE CONTAINER & IMG */
 /* ---------------------- */
 
 .image-container {
