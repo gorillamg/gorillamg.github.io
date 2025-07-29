@@ -79,8 +79,14 @@
   border-radius: 12px;
   display: block;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
+/* Image fades in when fonts + page fully load */
+.page-loaded.fonts-loaded .responsive-img {
+  opacity: 1;
+}
 /* ==============================
    GLOBAL STYLES
 ============================== */
