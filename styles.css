@@ -2,17 +2,15 @@
 /* FADE-IN ON CAROUSEL READY   */
 /* ---------------------------- */
 
-/* Hide all critical visuals on initial load */
 .carousel-box,
 .carousel-container,
-.responsive-img,
 .slick-carousel,
+.carousel-box .responsive-img,
 .logo-svg {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-/* Show everything smoothly once carousel is ready */
 .carousel-ready .carousel-box,
 .carousel-ready .carousel-container,
 .carousel-ready .responsive-img,
