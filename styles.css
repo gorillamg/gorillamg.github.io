@@ -1,3 +1,12 @@
+.logo-container {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fonts-loaded .logo-container {
+  opacity: 1;
+}
+
 /* ---------------------------- */
 /* FADE-IN ON CAROUSEL READY   */
 /* ---------------------------- */
