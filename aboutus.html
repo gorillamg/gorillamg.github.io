@@ -160,7 +160,11 @@
   window.addEventListener('load', () => {
     document.documentElement.classList.add('page-loaded');
   });
-  </script>
+
+  document.fonts.ready.then(() => {
+    document.documentElement.classList.add('fonts-loaded');
+  });
+</script>
 
 </body>
 </html>
