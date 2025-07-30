@@ -8,6 +8,11 @@ html, body {
 }
 
 html {
+  visibility: visible;
+  opacity: 1;
+}
+
+html.fade-gated {
   visibility: hidden;
   opacity: 0;
 }
