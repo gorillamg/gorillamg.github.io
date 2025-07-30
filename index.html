@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- FONT LOADING -->
+  <!-- Block render until font is ready -->
   <script>
-    document.fonts.ready.then(() => {
-      document.documentElement.classList.add('fonts-loaded');
-    });
+    document.documentElement.classList.add('fade-gated');
   </script>
 
   <!-- Preconnect to Google Fonts early to avoid delay -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-  
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
@@ -22,7 +20,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <link rel="icon" type="image/png" href="assets/gorilla.png">
   <link rel="shortcut icon" href="assets/gorilla.png" type="image/png">
-  
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN76QNDETC"></script>
   <script>
@@ -31,7 +29,7 @@
     gtag('js', new Date());
     gtag('config', 'G-RN76QNDETC');
   </script>
-  
+
   <!-- jQuery & Slick Carousel -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -149,8 +147,9 @@
   <p>&copy; 2025 Gorilla Marketing Group, LLC. All Rights Reserved.</p>
 </footer>
 
+<!-- FINAL SCRIPT -->
 <script>
-  // Slick Carousel initialization
+  // Slick Carousel init
   $(function () {
     $('.slick-carousel').on('init', function () {
       document.body.classList.add('carousel-ready');
@@ -171,17 +170,16 @@
     });
   });
 
-  // Hamburger menu toggle
+  // Menu toggle
   function toggleMenu() {
     document.getElementById('menu-modal').classList.toggle('show');
   }
 
-  // Page fully loaded
+  // Load triggers
   window.addEventListener('load', () => {
     document.documentElement.classList.add('page-loaded');
   });
 
-  // Font fully loaded
   document.fonts.ready.then(() => {
     document.documentElement.classList.add('fonts-loaded');
   });
