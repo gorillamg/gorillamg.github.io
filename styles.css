@@ -1,101 +1,5 @@
-.logo-container {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.fonts-loaded .logo-container {
-  opacity: 1;
-}
-
-/* ---------------------------- */
-/* FADE-IN ON CAROUSEL READY   */
-/* ---------------------------- */
-
-.carousel-box,
-.carousel-container,
-.slick-carousel,
-.carousel-box .responsive-img,
-.logo-svg {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.carousel-ready .carousel-box,
-.carousel-ready .carousel-container,
-.carousel-ready .carousel-box .responsive-img,
-.carousel-ready .slick-carousel,
-.carousel-ready .logo-svg {
-  opacity: 1;
-}
-
-/* ------------------------------------ */
-/* SLICK CAROUSEL STRUCTURE & OVERRIDES */
-/* ------------------------------------ */
-
-.slick-carousel {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
-
-/* Prevent brief visibility flash from Slick before init */
-.slick-initialized {
-  visibility: visible;
-}
-
-/* ---------------------------- */
-/* FLOATING CAROUSEL BOX STYLE  */
-/* ---------------------------- */
-
-.floating-box.carousel-box {
-  max-height: 500px;
-  max-width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-color: #24496b;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-/* ---------------------------- */
-/* IMAGE CONTAINER + IMAGE      */
-/* ---------------------------- */
-
-.image-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.responsive-img {
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  border-radius: 12px;
-  display: block;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-/* Image fades in when fonts + page fully load */
-.page-loaded.fonts-loaded .responsive-img {
-  opacity: 1;
-}
 /* ==============================
-   GLOBAL STYLES
+   FADE-IN + LOADING VISIBILITY
 ============================== */
 html, body {
   height: 100%;
@@ -108,11 +12,26 @@ html {
   opacity: 0;
 }
 
-html.fonts-loaded {
+html.page-loaded.fonts-loaded {
   visibility: visible;
   opacity: 1;
 }
 
+html.page-loaded.fonts-loaded .logo-container,
+html.page-loaded.fonts-loaded .responsive-img,
+html.page-loaded.fonts-loaded .logo-svg {
+  opacity: 1;
+}
+
+html.page-loaded.fonts-loaded .logo-text {
+  font-family: 'Permanent Marker', cursive;
+  fill: #1B0B26;
+  font-weight: normal;
+}
+
+/* ==============================
+   GLOBAL STYLES
+============================== */
 body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
@@ -146,6 +65,93 @@ input, textarea, select {
   border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
+}
+
+/* ==============================
+   LOGO CONTAINER
+============================== */
+.logo-container {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* ==============================
+   CAROUSEL FADE-IN
+============================== */
+.carousel-box,
+.carousel-container,
+.slick-carousel,
+.carousel-box .responsive-img,
+.logo-svg {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-ready .carousel-box,
+.carousel-ready .carousel-container,
+.carousel-ready .carousel-box .responsive-img,
+.carousel-ready .slick-carousel,
+.carousel-ready .logo-svg {
+  opacity: 1;
+}
+
+/* ==============================
+   SLICK CAROUSEL LAYOUT
+============================== */
+.slick-carousel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Prevent brief visibility flash from Slick before init */
+.slick-initialized {
+  visibility: visible;
+}
+
+/* ==============================
+   FLOATING CAROUSEL BOX
+============================== */
+.floating-box.carousel-box {
+  max-height: 500px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #24496b;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* ==============================
+   IMAGE + CONTAINER
+============================== */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.responsive-img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 /* ==============================
