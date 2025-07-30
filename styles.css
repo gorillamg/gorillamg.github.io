@@ -114,6 +114,66 @@ input, textarea, select {
 }
 
 /* ==============================
+   SLICK CAROUSEL IMAGE & ARROW STYLING
+============================== */
+.slick-list {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slick-carousel img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  z-index: 1000;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+/* Show arrows when carousel is ready */
+.carousel-ready .slick-prev,
+.carousel-ready .slick-next {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #98b1c8;
+}
+
+.slick-prev { left: 10px; }
+.slick-next { right: 10px; }
+
+.slick-prev i,
+.slick-next i {
+  color: #f7fafe !important;
+  font-size: 24px;
+  line-height: 48px;
+}
+
+.slick-prev:hover i,
+.slick-next:hover i {
+  color: #98b1c8 !important;
+}
+
+/* ==============================
    FLOATING CAROUSEL BOX
 ============================== */
 .floating-box.carousel-box {
@@ -646,69 +706,7 @@ footer svg {
 }
 
 /* ==============================
-   SLICK CAROUSEL
-============================== */
-
-.slick-list {
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.slick-carousel img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  display: block;
-}
-
-.slick-prev,
-.slick-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #ffffff;
-  border: 2px solid #ffffff; 
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  cursor: pointer;
-  z-index: 1000;
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease;
-}
-
-
-/* Show arrows when carousel is ready */
-.carousel-ready .slick-prev,
-.carousel-ready .slick-next {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-.slick-prev:hover,
-.slick-next:hover {
-  background-color: #98b1c8;
-}
-
-.slick-prev { left: 10px; }
-.slick-next { right: 10px; }
-
-.slick-prev i,
-.slick-next i {
-  color: #f7fafe !important;
-  font-size: 24px;
-  line-height: 48px;
-}
-
-.slick-prev:hover i,
-.slick-next:hover i {
-  color: #98b1c8 !important;
-}
-
-/* ==============================
-   SERVICES MODALS (Problem 5)
+   SERVICES MODALS 
 ============================== */
 
 .modal-btn {
