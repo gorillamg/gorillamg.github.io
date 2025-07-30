@@ -1,22 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>
-  document.fonts.ready.then(() => {
-    document.documentElement.classList.add('fonts-loaded');
-  });
-</script>
 
   <!-- Preconnect to Google Fonts early to avoid delay -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-
-  <script>
-  document.fonts.ready.then(function () {
-    document.documentElement.classList.add('fonts-loaded');
-  });
-  </script>
 	
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -163,19 +152,20 @@
 </footer>
 
   <script>
-    function toggleMenu() {
-      document.getElementById('menu-modal').classList.toggle('show');
-    }
-  </script>
-	
-  <script>
+  // Page fully loaded
   window.addEventListener('load', () => {
     document.documentElement.classList.add('page-loaded');
   });
 
+  // Fonts fully loaded
   document.fonts.ready.then(() => {
     document.documentElement.classList.add('fonts-loaded');
   });
+
+  // Menu toggle
+  function toggleMenu() {
+    document.getElementById('menu-modal').classList.toggle('show');
+  }
 </script>
 
 </body>
