@@ -149,10 +149,10 @@
   <p>&copy; 2025 Gorilla Marketing Group, LLC. All Rights Reserved.</p>
 </footer>
 
-<!-- SCRIPTS -->
 <script>
-  $(function() {
-    $('.slick-carousel').on('init', function() {
+  // Slick Carousel initialization
+  $(function () {
+    $('.slick-carousel').on('init', function () {
       document.body.classList.add('carousel-ready');
     });
 
@@ -171,12 +171,19 @@
     });
   });
 
+  // Hamburger menu toggle
   function toggleMenu() {
     document.getElementById('menu-modal').classList.toggle('show');
   }
 
+  // Page fully loaded
   window.addEventListener('load', () => {
     document.documentElement.classList.add('page-loaded');
+  });
+
+  // Font fully loaded
+  document.fonts.ready.then(() => {
+    document.documentElement.classList.add('fonts-loaded');
   });
 </script>
 
