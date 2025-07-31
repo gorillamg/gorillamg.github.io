@@ -50,8 +50,8 @@ body.page-not-loaded {
 /* Carousel and image layout */
 .image-container,
 .slick-carousel .image-container {
-  max-width: 100%;
   display: flex;
+  flex: 1 1 500px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
