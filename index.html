@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page-not-loaded">
 <head>
-
   <!-- Preconnect to Google Fonts early to avoid delay -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
   <script>
-  document.fonts.ready.then(function () {
-    document.documentElement.classList.add('fonts-loaded');
-  });
-</script>
-  
+    document.fonts.ready.then(function () {
+      document.documentElement.classList.add('fonts-loaded');
+    });
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
@@ -22,25 +21,23 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <link rel="icon" type="image/png" href="assets/gorilla.png">
   <link rel="shortcut icon" href="assets/gorilla.png" type="image/png">
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RN76QNDETC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-RN76QNDETC');
-</script>
-  
-<!-- jQuery CDN -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN76QNDETC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RN76QNDETC');
+  </script>
 
-<!-- Slick Carousel CSS & JS -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- Slick Carousel CSS & JS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -75,9 +72,9 @@
     <div class="menu-modal-header">
       <a href="index.html">
         <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
-        <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
-        <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
-      </svg>
+          <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
+          <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
+        </svg>
       </a>
       <button class="close-menu" onclick="toggleMenu()">x</button>
     </div>
@@ -106,23 +103,21 @@
       <a href="contactus.html" class="custom-btn getstarted-btn" style="padding: 12px 30px; border-radius: 999px;">Get Started</a>
     </div>
   </div>
-  
-   <!-- RIGHT HALF -->
+
+  <!-- RIGHT HALF -->
   <div class="responsive-half">
     <div class="floating-box carousel-box">
-      <!-- Slick Carousel -->
       <div class="slick-carousel">
-  <div class="image-container">
-    <img src="assets/3.png" alt="Image 1" class="responsive-img">
-  </div>
-  <div class="image-container">
-    <img src="assets/4.png" alt="Image 2" class="responsive-img">
-  </div>
-  <div class="image-container">
-    <img src="assets/2.png" alt="Image 3" class="responsive-img">
-  </div>
-</div>
-
+        <div class="image-container">
+          <img src="assets/3.png" alt="Image 1" class="responsive-img">
+        </div>
+        <div class="image-container">
+          <img src="assets/4.png" alt="Image 2" class="responsive-img">
+        </div>
+        <div class="image-container">
+          <img src="assets/2.png" alt="Image 3" class="responsive-img">
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -178,17 +173,14 @@
       });
     }, 100);
   });
-</script>
 
-<script>
   function toggleMenu() {
     document.getElementById('menu-modal').classList.toggle('show');
   }
-</script>
 
-  <script>
   window.addEventListener('load', () => {
     document.documentElement.classList.add('page-loaded');
+    document.documentElement.classList.remove('page-not-loaded');
   });
 </script>
 
