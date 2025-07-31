@@ -1,5 +1,83 @@
+/* Hide initially */
+.responsive-img,
+.slick-carousel,
+.logo-svg {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Fade in smoothly once fully loaded */
+.page-loaded .responsive-img,
+.page-loaded .slick-carousel,
+.page-loaded .logo-svg {
+  visibility: visible;
+  opacity: 1;
+}
+
+.slick-carousel .image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.slick-carousel img.responsive-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+  opacity: 1;
+  z-index: 1;
+}
+
+.floating-box.carousel-box {
+  max-height: 500px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #24496b;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carousel-box .responsive-img {
+  object-fit: contain; 
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.responsive-img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 12px;
+  display: block;
+  opacity: 0;
+  z-index: 1;
+}
+
+/* When loaded */
+.responsive-img.loaded {
+  opacity: 1;
+}
 /* ==============================
-   FADE-IN + LOADING VISIBILITY
+   GLOBAL STYLES
 ============================== */
 html, body {
   height: 100%;
@@ -8,35 +86,15 @@ html, body {
 }
 
 html {
-  visibility: visible;
-  opacity: 1;
-}
-
-html.fade-gated {
   visibility: hidden;
   opacity: 0;
 }
 
-html.page-loaded.fonts-loaded {
+html.fonts-loaded {
   visibility: visible;
   opacity: 1;
 }
 
-html.page-loaded.fonts-loaded .logo-container,
-html.page-loaded.fonts-loaded .responsive-img,
-html.page-loaded.fonts-loaded .logo-svg {
-  opacity: 1;
-}
-
-html.page-loaded.fonts-loaded .logo-text {
-  font-family: 'Permanent Marker', cursive;
-  fill: #1B0B26;
-  font-weight: normal;
-}
-
-/* ==============================
-   GLOBAL STYLES
-============================== */
 body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
@@ -70,153 +128,6 @@ input, textarea, select {
   border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
-}
-
-/* ==============================
-   LOGO CONTAINER
-============================== */
-.logo-container {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-/* ==============================
-   CAROUSEL FADE-IN
-============================== */
-.carousel-box,
-.carousel-container,
-.slick-carousel,
-.carousel-box .responsive-img,
-.logo-svg {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.carousel-ready .carousel-box,
-.carousel-ready .carousel-container,
-.carousel-ready .carousel-box .responsive-img,
-.carousel-ready .slick-carousel,
-.carousel-ready .logo-svg {
-  opacity: 1;
-}
-
-/* ==============================
-   SLICK CAROUSEL LAYOUT
-============================== */
-.slick-carousel {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
-
-/* Prevent brief visibility flash from Slick before init */
-.slick-initialized {
-  visibility: visible;
-}
-
-/* ==============================
-   SLICK CAROUSEL IMAGE & ARROW STYLING
-============================== */
-.slick-list {
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.slick-carousel img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  display: block;
-}
-
-.slick-prev,
-.slick-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #ffffff;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  cursor: pointer;
-  z-index: 1000;
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease;
-}
-
-/* Show arrows when carousel is ready */
-.carousel-ready .slick-prev,
-.carousel-ready .slick-next {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-.slick-prev:hover,
-.slick-next:hover {
-  background-color: #98b1c8;
-}
-
-.slick-prev { left: 10px; }
-.slick-next { right: 10px; }
-
-.slick-prev i,
-.slick-next i {
-  color: #f7fafe !important;
-  font-size: 24px;
-  line-height: 48px;
-}
-
-.slick-prev:hover i,
-.slick-next:hover i {
-  color: #98b1c8 !important;
-}
-
-/* ==============================
-   FLOATING CAROUSEL BOX
-============================== */
-.floating-box.carousel-box {
-  max-height: 500px;
-  max-width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-color: #24496b;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-/* ==============================
-   IMAGE + CONTAINER
-============================== */
-.image-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.responsive-img {
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  border-radius: 12px;
-  display: block;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.5s ease;
 }
 
 /* ==============================
@@ -711,7 +622,78 @@ footer svg {
 }
 
 /* ==============================
-   SERVICES MODALS 
+   SLICK CAROUSEL
+============================== */
+
+.slick-carousel {
+  position: relative;
+  border-radius: 12px;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slick-initialized {
+  visibility: visible;
+  opacity: 1;
+}
+
+.slick-list {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slick-carousel img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  display: none !important;
+  content: '' !important;
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  border: 2px solid #ffffff; 
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  z-index: 1000;
+  text-align: center;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #98b1c8;
+}
+
+.slick-prev { left: 10px; }
+.slick-next { right: 10px; }
+
+.slick-prev i,
+.slick-next i {
+  color: #f7fafe !important;
+  font-size: 24px;
+  line-height: 48px;
+}
+
+.slick-prev:hover i,
+.slick-next:hover i {
+  color: #98b1c8 !important;
+}
+
+/* ==============================
+   SERVICES MODALS (Problem 5)
 ============================== */
 
 .modal-btn {
