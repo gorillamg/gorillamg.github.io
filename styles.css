@@ -7,57 +7,44 @@ body.page-not-loaded {
 /* STEP 2 — Hide all major components until ready */
 .page-not-loaded nav,
 .page-not-loaded footer,
+.page-not-loaded .responsive-section,
+.page-not-loaded .responsive-half,
 .page-not-loaded .floating-box,
 .page-not-loaded .second-section,
 .page-not-loaded .floating-box.carousel-box,
 .page-not-loaded .slick-carousel,
 .page-not-loaded .image-container,
 .page-not-loaded .gorillacares-second,
-.page-not-loaded .gorillacares-box, {
+.page-not-loaded .gorillacares-box,
+.page-not-loaded .contactus-form-box,
+.page-not-loaded .responsive-img,
+.page-not-loaded .logo-svg,
+.page-not-loaded .logo-text {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s ease;
+  visibility: hidden;
 }
 
 /* STEP 3 — Reveal all components smoothly */
 .page-loaded nav,
 .page-loaded footer,
+.page-loaded .responsive-section,
+.page-loaded .responsive-half,
 .page-loaded .floating-box,
 .page-loaded .second-section,
 .page-loaded .floating-box.carousel-box,
 .page-loaded .slick-carousel,
-.page-loaded .image-container {
+.page-loaded .image-container,
+.page-loaded .gorillacares-second,
+.page-loaded .gorillacares-box,
+.page-loaded .contactus-form-box,
+.page-loaded .responsive-img,
+.page-loaded .logo-svg,
+.page-loaded .logo-text {
   opacity: 1;
   pointer-events: auto;
-  transition: opacity 0.5s ease;
-}
-
-/* Fully hide all responsive images during initial load */
-.page-not-loaded .responsive-img {
-  display: none !important;
-}
-
-/* Reveal images only after load */
-.page-loaded .responsive-img {
-  display: block !important;
-  opacity: 1;
   visibility: visible;
-  transition: opacity 0.5s ease;
-}
-
-/* Initial state for carousel & logo */
-.responsive-img,
-.slick-carousel,
-.logo-svg {
-  visibility: hidden;
-  opacity: 0;
   transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.page-loaded .slick-carousel,
-.page-loaded .logo-svg {
-  visibility: visible;
-  opacity: 1;
 }
 
 /* Carousel and image layout */
@@ -82,7 +69,6 @@ body.page-not-loaded {
   border-radius: 12px;
   display: block;
   z-index: 1;
-  transition: opacity 0.5s ease;
 }
 
 /* Floating carousel container */
@@ -112,13 +98,14 @@ html, body {
 }
 
 html {
-  visibility: hidden;
   opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
 }
 
 html.fonts-loaded {
-  visibility: visible;
   opacity: 1;
+  visibility: visible;
 }
 
 body {
@@ -491,20 +478,6 @@ footer svg {
 }
 
 /* === Index page - Second body section === */
-/* Also hide the second-section during first load */
-.page-not-loaded .second-section,
-.page-not-loaded .second-part-box {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s ease;
-}
-
-/* Show it after page load */
-.page-loaded .second-section,
-.page-loaded .second-part-box {
-  opacity: 1;
-  pointer-events: auto;
-}
 
 .second-section {
   display: flex;
