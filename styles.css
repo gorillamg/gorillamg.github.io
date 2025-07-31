@@ -65,8 +65,8 @@ body.page-not-loaded {
 .carousel-box .responsive-img,
 .slick-carousel img.responsive-img {
   object-fit: contain;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 12px;
   display: block;
   z-index: 1;
