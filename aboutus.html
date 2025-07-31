@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
 
-  <!-- Preconnect to Google Fonts early to avoid delay -->
+	<!-- Preconnect to Google Fonts early to avoid delay -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  
+<script>
+  document.fonts.ready.then(function () {
+    document.documentElement.classList.add('fonts-loaded');
+  });
+</script>
 	
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -29,16 +35,13 @@
 </head>
 <body>
 
-<!-- NAV BAR -->
 <nav id="navbar">
   <div id="nav-left-group">
     <a href="index.html" id="nav-logo-link">
-      <div class="logo-container">
-        <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
-          <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
-          <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
-        </svg>
-      </div>
+      <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
+        <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
+      </svg>
     </a>
     <div id="desktop-nav-left">
       <a href="aboutus.html" class="nav-link">About Us</a>
@@ -47,6 +50,7 @@
       <a href="contactus.html" class="nav-link">Contact Us</a>
     </div>
   </div>
+
   <div id="nav-right">
     <a href="https://www.linkedin.com/in/grant-riley-sales" target="_blank" class="linkedin-icon">
       <i class="fab fa-linkedin"></i>
@@ -60,12 +64,10 @@
   <div class="menu-modal-content">
     <div class="menu-modal-header">
       <a href="index.html">
-        <div class="logo-container">
-          <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
-            <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
-            <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
-          </svg>
-        </div>
+        <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
+        <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
+      </svg>
       </a>
       <button class="close-menu" onclick="toggleMenu()">x</button>
     </div>
@@ -140,35 +142,23 @@
   </div>
 </section>
 
-  <!-- FOOTER -->
-<footer>
-  <div class="logo-container">
-    <svg class="logo-svg" width="260px" height="120px" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
-      <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
-      <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
-    </svg>
-  </div>
+  <footer>
+  <svg class="logo-svg" width="260px" height="120px" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+    <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" style="font-size: 38px;" class="logo-text">Gorilla</text>
+    <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" style="font-size: 20px;" class="logo-text">Marketing Group</text>
+  </svg>
   <p>&copy; 2025 Gorilla Marketing Group, LLC. All Rights Reserved.</p>
 </footer>
 
   <script>
-  // Page fully loaded
+    function toggleMenu() {
+      document.getElementById('menu-modal').classList.toggle('show');
+    }
+  </script>
+<script>
   window.addEventListener('load', () => {
-    document.documentElement.classList.add('page-loaded');
+    document.body.classList.add('page-loaded');
   });
-
-  // Fonts fully loaded
-  document.fonts.ready.then(() => {
-    document.documentElement.classList.add('fonts-loaded');
-  });
-
-  // Menu toggle
-  function toggleMenu() {
-    document.getElementById('menu-modal').classList.toggle('show');
-  }
 </script>
-
 </body>
 </html>
-
-
