@@ -5,7 +5,7 @@ body.page-not-loaded {
 }
 
 /* STEP 2 — Hide all major components until ready */
-.page-not-loaded nav,
+.page-not-loaded nav#navbar,
 .page-not-loaded footer,
 .page-not-loaded .responsive-section,
 .page-not-loaded .responsive-half,
@@ -14,9 +14,9 @@ body.page-not-loaded {
 .page-not-loaded .floating-box.carousel-box,
 .page-not-loaded .slick-carousel,
 .page-not-loaded .image-container,
-.page-not-loaded .gorillacares-second,
+.page-not-loaded #gorillacares-second,
 .page-not-loaded .gorillacares-box,
-.page-not-loaded .donation-amount,
+.page-not-loaded #donation-amount,
 .page-not-loaded .contactus-form-box,
 .page-not-loaded .responsive-img,
 .page-not-loaded .logo-svg,
