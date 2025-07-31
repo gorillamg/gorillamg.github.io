@@ -57,6 +57,7 @@ body.page-not-loaded {
   justify-content: center;
   overflow: hidden;
   position: relative;
+  z-index: 0;
 }
 
 /* Image styling */
@@ -69,6 +70,7 @@ body.page-not-loaded {
   border-radius: 12px;
   display: block;
   z-index: 1;
+  transition: opacity 0.5s ease;
 }
 
 /* Floating carousel container */
@@ -81,11 +83,6 @@ body.page-not-loaded {
   background-color: #24496b;
   border-radius: 12px;
   overflow: hidden;
-}
-
-/* For images when JS loads them */
-.responsive-img.loaded {
-  opacity: 1;
 }
 
 /* ==============================
