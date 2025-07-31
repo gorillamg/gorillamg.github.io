@@ -7,12 +7,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   
-<script>
-  document.fonts.ready.then(function () {
-    document.documentElement.classList.add('fonts-loaded');
-  });
-</script>
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Success</title>
@@ -270,46 +264,49 @@
   }
 </script>
   
+<!-- Add fonts-loaded and page-loaded classes -->
 <script>
+  document.fonts.ready.then(() => {
+    document.documentElement.classList.add('fonts-loaded');
+  });
+
   window.addEventListener('load', () => {
     document.body.classList.add('page-loaded');
-  });
-</script> 
-  
-  <script>
-  window.addEventListener('DOMContentLoaded', () => {
+
+    // Animate SVG after body is visible
     const svg = document.getElementById('gmg-logo');
+    if (!svg) return;
+
     const paths = svg.querySelectorAll('path');
+    if (!paths || paths.length === 0) return;
 
-    window.requestAnimationFrame(() => {
-      paths.forEach((path, index) => {
-        const length = path.getTotalLength();
-
-        path.style.stroke = '#f7fafe';            
-        path.style.strokeWidth = '95';            
-        path.style.fill = 'none';                 
-        path.style.strokeLinecap = 'round';
-        path.style.strokeLinejoin = 'round';
-        path.style.strokeDasharray = length;
-        path.style.strokeDashoffset = length;
-        path.style.transition = 'none';
-
-        requestAnimationFrame(() => {
-          path.style.transition = '';
-          path.style.animation = drawLetter 0.6s ease-out forwards ${index * 0.3}s;
-        });
-      });
-    });
-
+    // Dynamically inject @keyframes into the page
     const style = document.createElement('style');
-    style.textContent = 
+    style.textContent = `
       @keyframes drawLetter {
         to {
           stroke-dashoffset: 0;
         }
       }
-    ;
+    `;
     document.head.appendChild(style);
+
+    window.requestAnimationFrame(() => {
+      paths.forEach((path, index) => {
+        const length = path.getTotalLength();
+
+        path.style.stroke = '#f7fafe';
+        path.style.strokeWidth = '95';
+        path.style.fill = 'none';
+        path.style.strokeLinecap = 'round';
+        path.style.strokeLinejoin = 'round';
+        path.style.strokeDasharray = length;
+        path.style.strokeDashoffset = length;
+
+        // Apply animation only after page is visibly ready
+        path.style.animation = `drawLetter 0.6s ease-out forwards ${index * 0.3}s`;
+      });
+    });
   });
 </script>
   
