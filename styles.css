@@ -4,28 +4,32 @@ body.page-not-loaded {
   overflow: hidden;
 }
 
-/* STEP 2 — Hide everything visually until ready */
+/* STEP 2 — Hide all major components until ready */
 .page-not-loaded nav,
 .page-not-loaded footer,
-.page-not-loaded .floating-box {
+.page-not-loaded .floating-box,
+.page-not-loaded .second-section {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
 }
 
-/* STEP 3 — Reveal everything when ready */
+/* STEP 3 — Reveal all components smoothly */
 .page-loaded nav,
 .page-loaded footer,
-.page-loaded .floating-box {
+.page-loaded .floating-box,
+.page-loaded .second-section {
   opacity: 1;
   pointer-events: auto;
+  transition: opacity 0.5s ease;
 }
 
-/* During loading, hide all images entirely */
+/* Fully hide all responsive images during initial load */
 .page-not-loaded .responsive-img {
   display: none !important;
 }
 
+/* Reveal images only after load */
 .page-loaded .responsive-img {
   display: block !important;
   opacity: 1;
@@ -33,7 +37,7 @@ body.page-not-loaded {
   transition: opacity 0.5s ease;
 }
 
-/* Initial fade-in setup for images, carousels, and logo SVG */
+/* Initial state for carousel & logo */
 .responsive-img,
 .slick-carousel,
 .logo-svg {
@@ -42,16 +46,15 @@ body.page-not-loaded {
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.page-loaded .responsive-img,
 .page-loaded .slick-carousel,
 .page-loaded .logo-svg {
   visibility: visible;
   opacity: 1;
 }
 
-/* Carousel & Image Layout */
-.slick-carousel .image-container,
-.image-container {
+/* Carousel and image layout */
+.image-container,
+.slick-carousel .image-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -61,9 +64,10 @@ body.page-not-loaded {
   position: relative;
 }
 
-.slick-carousel img.responsive-img,
+/* Image styling */
+.responsive-img,
 .carousel-box .responsive-img,
-.responsive-img {
+.slick-carousel img.responsive-img {
   object-fit: contain;
   width: 100%;
   height: 100%;
@@ -73,6 +77,7 @@ body.page-not-loaded {
   transition: opacity 0.5s ease;
 }
 
+/* Floating carousel container */
 .floating-box.carousel-box {
   max-height: 500px;
   max-width: 500px;
@@ -84,7 +89,7 @@ body.page-not-loaded {
   overflow: hidden;
 }
 
-/* When image JS loads */
+/* For images when JS loads them */
 .responsive-img.loaded {
   opacity: 1;
 }
