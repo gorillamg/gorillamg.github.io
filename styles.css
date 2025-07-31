@@ -8,7 +8,10 @@ body.page-not-loaded {
 .page-not-loaded nav,
 .page-not-loaded footer,
 .page-not-loaded .floating-box,
-.page-not-loaded .second-section {
+.page-not-loaded .second-section,
+.page-not-loaded .floating-box.carousel-box,
+.page-not-loaded .slick-carousel,
+.page-not-loaded .image-container {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
@@ -18,7 +21,10 @@ body.page-not-loaded {
 .page-loaded nav,
 .page-loaded footer,
 .page-loaded .floating-box,
-.page-loaded .second-section {
+.page-loaded .second-section,
+.page-loaded .floating-box.carousel-box,
+.page-loaded .slick-carousel,
+.page-loaded .image-container {
   opacity: 1;
   pointer-events: auto;
   transition: opacity 0.5s ease;
