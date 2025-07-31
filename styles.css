@@ -1,12 +1,35 @@
-/* Hide initially */
+/* STEP 1 — Initial full-screen background */
+body.page-not-loaded {
+  background-color: #446d92 !important;
+  overflow: hidden;
+}
+
+/* STEP 2 — Hide everything visually until ready */
+.page-not-loaded nav,
+.page-not-loaded footer,
+.page-not-loaded .floating-box {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* STEP 3 — Reveal everything when ready */
+.page-loaded nav,
+.page-loaded footer,
+.page-loaded .floating-box {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Initial fade-in setup for images, carousels, and logo SVG */
 .responsive-img,
 .slick-carousel,
 .logo-svg {
   visibility: hidden;
   opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-/* Fade in smoothly once fully loaded */
 .page-loaded .responsive-img,
 .page-loaded .slick-carousel,
 .page-loaded .logo-svg {
@@ -14,7 +37,9 @@
   opacity: 1;
 }
 
-.slick-carousel .image-container {
+/* Carousel & Image Layout */
+.slick-carousel .image-container,
+.image-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -24,14 +49,16 @@
   position: relative;
 }
 
-.slick-carousel img.responsive-img {
+.slick-carousel img.responsive-img,
+.carousel-box .responsive-img,
+.responsive-img {
+  object-fit: contain;
   width: 100%;
   height: 100%;
-  object-fit: contain;
   border-radius: 12px;
   display: block;
-  opacity: 1;
   z-index: 1;
+  transition: opacity 0.5s ease;
 }
 
 .floating-box.carousel-box {
@@ -40,42 +67,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   background-color: #24496b;
-  overflow: hidden;
   border-radius: 12px;
-}
-
-.carousel-box .responsive-img {
-  object-fit: contain; 
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.image-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
 
-.responsive-img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 12px;
-  display: block;
-  opacity: 0;
-  z-index: 1;
-}
-
-/* When loaded */
+/* When image JS loads */
 .responsive-img.loaded {
   opacity: 1;
 }
+
 /* ==============================
    GLOBAL STYLES
 ============================== */
