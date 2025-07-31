@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Block render until font is ready -->
-  <script>
-    document.documentElement.classList.add('fade-gated');
-  </script>
 
   <!-- Preconnect to Google Fonts early to avoid delay -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
+  <script>
+  document.fonts.ready.then(function () {
+    document.documentElement.classList.add('fonts-loaded');
+  });
+</script>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
@@ -20,35 +22,36 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <link rel="icon" type="image/png" href="assets/gorilla.png">
   <link rel="shortcut icon" href="assets/gorilla.png" type="image/png">
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RN76QNDETC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN76QNDETC"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RN76QNDETC');
-  </script>
+  gtag('config', 'G-RN76QNDETC');
+</script>
+  
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-  <!-- jQuery & Slick Carousel -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- Slick Carousel CSS & JS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
 </head>
 
 <body>
 
-<!-- NAV BAR -->
 <nav id="navbar">
   <div id="nav-left-group">
     <a href="index.html" id="nav-logo-link">
-      <div class="logo-container">
-        <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
-          <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
-          <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
-        </svg>
-      </div>
+      <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
+        <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
+      </svg>
     </a>
     <div id="desktop-nav-left">
       <a href="aboutus.html" class="nav-link">About Us</a>
@@ -57,6 +60,7 @@
       <a href="contactus.html" class="nav-link">Contact Us</a>
     </div>
   </div>
+
   <div id="nav-right">
     <a href="https://www.linkedin.com/in/grant-riley-sales" target="_blank" class="linkedin-icon">
       <i class="fab fa-linkedin"></i>
@@ -70,12 +74,10 @@
   <div class="menu-modal-content">
     <div class="menu-modal-header">
       <a href="index.html">
-        <div class="logo-container">
-          <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
-            <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
-            <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
-          </svg>
-        </div>
+        <svg class="logo-svg" width="260" height="120" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
+        <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
+      </svg>
       </a>
       <button class="close-menu" onclick="toggleMenu()">x</button>
     </div>
@@ -91,97 +93,102 @@
   </div>
 </div>
 
-<!-- BODY SECTION 1 -->
+<!-- FIRST BODY SECTION -->
 <div class="responsive-section" style="gap: 20px;">
   <div class="responsive-half">
     <div class="floating-box" style="border-radius: 22px;">
-      <h1 style="color: #071f35; font-weight: bold;">Welcome to the <span style="color: #24496b; font-style: italic;">GORILLA</span>!</h1>
-      <h2 style="color: #000000; font-weight: bold;">We are here to help meet and exceed all of your marketing goals and objectives! Symbolically, <span style="color: #24496b; font-style: italic;">gorillas</span> represent strength and leadership, as well as compassion and generosity. These traits are what <span style="color: #24496b; font-style: italic;">GORILLA MARKETING GROUP</span> is all about!</h2>
+      <h1 style="color: #071f35; font-weight: bold;">
+        Welcome to the <span style="color: #24496b; font-style: italic; font-weight: bold;">GORILLA</span>!
+      </h1>
+      <h2 style="color: #000000; font-weight: bold;">
+        We are here to help meet and exceed all of your marketing goals and objectives! Symbolically, <span style="color: #24496b; font-style: italic; font-weight: bold;">gorillas</span> represent strength and leadership, as well as compassion and generosity. These traits are what <span style="color: #24496b; font-style: italic; font-weight: bold;">GORILLA MARKETING GROUP</span> is all about!
+      </h2>
       <a href="contactus.html" class="custom-btn getstarted-btn" style="padding: 12px 30px; border-radius: 999px;">Get Started</a>
     </div>
   </div>
+  
+   <!-- RIGHT HALF -->
   <div class="responsive-half">
     <div class="floating-box carousel-box">
+      <!-- Slick Carousel -->
       <div class="slick-carousel">
-        <div class="image-container">
-          <img src="assets/3.png" alt="Image 1" class="responsive-img">
-        </div>
-        <div class="image-container">
-          <img src="assets/4.png" alt="Image 2" class="responsive-img">
-        </div>
-        <div class="image-container">
-          <img src="assets/2.png" alt="Image 3" class="responsive-img">
-        </div>
-      </div>
+  <div class="image-container">
+    <img src="assets/3.png" alt="Image 1" class="responsive-img">
+  </div>
+  <div class="image-container">
+    <img src="assets/4.png" alt="Image 2" class="responsive-img">
+  </div>
+  <div class="image-container">
+    <img src="assets/2.png" alt="Image 3" class="responsive-img">
+  </div>
+</div>
+
     </div>
   </div>
 </div>
 
-<!-- BODY SECTION 2 -->
-<div class="second-section" style="padding: 40px 20px;">
+<!-- SECOND BODY SECTION -->
+<div class="second-section" style="padding: 40px 20px 40px 20px;">
   <div class="second-part-box">
     <h1>STRENGTH</h1>
-    <h2>The strength of <span style="color: #24496b; font-style: italic;">Gorilla Marketing Group</span> comes from 35+ years of experience in the ever-growing marketing industry. Learn more about the company's owner, Grant Riley.</h2>
+    <h2>
+      The strength of <span style="color: #24496b; font-style: italic; font-weight: bold;">Gorilla Marketing Group</span> comes from a whopping 35+ years of real experience in the ever-growing marketing industry. Learn more today about the company's owner, Grant Riley, and find out how your marketing needs can be met.
+    </h2>
     <a href="aboutus.html" class="custom-btn btn1">About Us</a>
   </div>
   <div class="second-part-box">
     <h1>LEADERSHIP</h1>
-    <h2>Through our parent company, <a href="https://eliterewards.biz/" class="elite-link" target="_blank">Elite Rewards</a>, we provide cutting-edge marketing strategies tailored for businesses of all sizes.</h2>
+    <h2>
+      Through our parent company, <a href="https://eliterewards.biz/" class="elite-link" target="_blank">Elite Rewards</a>, we are a leader in providing cutting edge marketing strategies to match a variety of businesses, both large and small. Our innovative tailored incentive solutions help drive business, help significantly promote customer loyalty, and lead to higher employee retention rates.
+    </h2>
     <a href="services.html" class="custom-btn btn1">Services</a>
   </div>
   <div class="second-part-box">
     <h1>COMPASSION & GENEROSITY</h1>
-    <h2><span style="color: #24496b; font-style: italic;">GMG</span> believes true success involves giving back. Grant Riley volunteers with <a href="https://firstteevirginiablueridge.org/" class="firsttee-link" target="_blank">First Tee - Virginia Blue Ridge</a> to help youth through golf.</h2>
+    <h2>
+      <span style="color: #24496b; font-style: italic; font-weight: bold;">GMG</span> understands that true success always involves giving back to the community in some meaningfully positive way. A spirit of compassion and generosity infuses everything that we do. The company's owner, Grant Riley, gives back by volunteering with <a href="https://firstteevirginiablueridge.org/" class="firsttee-link" target="_blank">First Tee - Virginia Blue Ridge</a>, a program designed to transform the lives of kids and teens through the game of golf.
+    </h2>
     <a href="gorillacares.html" class="custom-btn btn1">Gorilla Cares</a>
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
-  <div class="logo-container">
-    <svg class="logo-svg" width="260px" height="120px" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
-      <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="38" class="logo-text">Gorilla</text>
-      <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-size="20" class="logo-text">Marketing Group</text>
-    </svg>
-  </div>
+  <svg class="logo-svg" width="260px" height="120px" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+    <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" style="font-size: 38px;" class="logo-text">Gorilla</text>
+    <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" style="font-size: 20px;" class="logo-text">Marketing Group</text>
+  </svg>
   <p>&copy; 2025 Gorilla Marketing Group, LLC. All Rights Reserved.</p>
 </footer>
 
-<!-- FINAL SCRIPT -->
 <script>
-  // Slick Carousel init
-  $(function () {
-    $('.slick-carousel').on('init', function () {
-      document.body.classList.add('carousel-ready');
-    });
-
-    $('.slick-carousel').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      autoplay: true,
-      autoplaySpeed: 5000,
-      pauseOnHover: false,
-      pauseOnFocus: false,
-      pauseOnDotsHover: false,
-      prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
-      nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
-    });
+  $(window).on('load', function(){
+    setTimeout(function() {
+      $('.slick-carousel').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        pauseOnDotsHover: false,
+        prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
+      });
+    }, 100);
   });
+</script>
 
-  // Menu toggle
+<script>
   function toggleMenu() {
     document.getElementById('menu-modal').classList.toggle('show');
   }
+</script>
 
-  // Load triggers
+  <script>
   window.addEventListener('load', () => {
     document.documentElement.classList.add('page-loaded');
-  });
-
-  document.fonts.ready.then(() => {
-    document.documentElement.classList.add('fonts-loaded');
   });
 </script>
 
