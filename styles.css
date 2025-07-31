@@ -466,6 +466,21 @@ footer svg {
 }
 
 /* === Index page - Second body section === */
+/* Also hide the second-section during first load */
+.page-not-loaded .second-section,
+.page-not-loaded .second-part-box {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* Show it after page load */
+.page-loaded .second-section,
+.page-loaded .second-part-box {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .second-section {
   display: flex;
   background-color: #24496b;
