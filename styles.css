@@ -21,6 +21,18 @@ body.page-not-loaded {
   pointer-events: auto;
 }
 
+/* During loading, hide all images entirely */
+.page-not-loaded .responsive-img {
+  display: none !important;
+}
+
+.page-loaded .responsive-img {
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease;
+}
+
 /* Initial fade-in setup for images, carousels, and logo SVG */
 .responsive-img,
 .slick-carousel,
