@@ -75,8 +75,8 @@ body.page-not-loaded {
 
 /* Floating carousel container */
 .floating-box.carousel-box {
-  max-height: 500px;
-  max-width: 500px;
+  max-height: 100%;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
