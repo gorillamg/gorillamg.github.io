@@ -894,12 +894,13 @@ footer svg {
 }
 
 /* ==============================
-   gorilla cares second and third sections
+   gorilla cares second section
 ============================== */
 
 #gorillacares-second {
   background-color: #98b1c8;
   text-align: center;
+  padding: 20px 40px 40px 40px;
 }
 
 .gorillacares-box {
