@@ -290,19 +290,19 @@
 
         requestAnimationFrame(() => {
           path.style.transition = '';
-          path.style.animation = `drawLetter 0.6s ease-out forwards ${index * 0.3}s`;
+          path.style.animation = drawLetter 0.6s ease-out forwards ${index * 0.3}s;
         });
       });
     });
 
     const style = document.createElement('style');
-    style.textContent = `
+    style.textContent = 
       @keyframes drawLetter {
         to {
           stroke-dashoffset: 0;
         }
       }
-    `;
+    ;
     document.head.appendChild(style);
   });
 </script>
@@ -313,4 +313,3 @@
 </script>  
 </body>
 </html>
-
